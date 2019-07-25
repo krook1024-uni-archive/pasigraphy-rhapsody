@@ -8,3 +8,6 @@ A Paszigráfia Rapszódia egy olyan mesterséges nyelv kialakítására törekv�
 kezdeményezés, mely lehetővé teszi a homunkulusz és a mesterséges homunkulusz 
 közötti kommunikációt, ergó ez az esport kultúra nyelve.
 
+* Visualization of the Language of the Esports Culture: A Preliminary Study/Az esport kultúra nyelvének vizualizációja: egy előtanulmány
+* Construction of the Language of the Esports Culture: A Preliminary Study/Az esport kultúra nyelvének megalkotása: egy előtanulmány
+* A PaRa formalization of the Lord's Prayer and the "Hello, World" C program/A Miatyánk és a "Helló, Világ!" program egy PaRa formalizációja
