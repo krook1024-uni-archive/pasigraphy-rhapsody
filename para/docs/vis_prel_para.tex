@@ -27,10 +27,8 @@
 %
 
 \documentclass[a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{t1enc}
-%\def\magyarOptions{defaults=hu-min}
 \usepackage[english,magyar]{babel}
+\usepackage{fontspec}
 \usepackage{apacite}
 \usepackage{luacode}
 \directlua{require('prelpara')}
@@ -47,6 +45,7 @@
 \usepackage[export]{adjustbox}
 \usepackage{seqsplit}
 \usepackage{csquotes}
+\usepackage{graphicx}
 
 \newcommand{\paradump}[1]{{\ttfamily\seqsplit{#1}}}
 
@@ -78,8 +77,6 @@ A Paszigráfia Rapszódia \cite{PARAREPO}, vagy röviden PaRa egy olyan mesters�
 The Pasigraphy Rhapsody \cite{PARAREPO}, or shortly PaRa (from it's Hungarian name Paszigr\'afia Rapsz\'odia) is an initiative to develop an artificial language that is intended to allow communication between the Homunculus and the Artificial Homunculus, ergo, it is the language of the esport culture \cite{MITEL}. In this preliminary study, we investigate some possibilities of visualization of Pasigraphy Rhapsody. Its intuitive base comes from SMNIST images \cite{SMNIST}, where the numerosity of dots must be recognized in images. But it should be noticed that in this case the numerosity does not matter but the exact position of the dots.
 \end{abstract}
 }
-
-\input{license}
  
 \section{Introduction}
 
@@ -133,11 +130,40 @@ At the moment, we are experimenting with multiple TikZ based visualizations. The
 
 \paradump{./para6 \  3:2:1:1:0:3:2:1:0:2:0:2:1:1:0:3:3:0:2:0:1:1:0:1:0:1:0:1:0:2:2:0:1:1:1:3:2:1:0:2:0:2:1:1:1:2:3:0:1:1:1:1:0:3:3:0:1:0:2:1:0:1:0:2:2:0:0:0:1:3:1:0:1:3:2:1:0:2:0:3:3:0:1:0:2:1:0}
 
-\includegraphics[scale=.5, frame]{para6exp2t}
+\begin{figure}[h]
+\begin{tabular}{ll}
+\includegraphics[scale=.25, frame]{para6exp2t}
+&
+\includegraphics[scale=.25, frame]{para6exp2}
+\end{tabular}
+\caption{Cube letters can be rotated separately around all three directions. A négyzet betűk mindhárom irányban külön forgathatóak. Az adott betű kijelölése nehézkes.}
+\label{figpara6}
+\end{figure}
 
-\includegraphics[scale=.5, frame]{para6exp2}
+
+\begin{figure}[h]
+\begin{tabular}{ll}
+\includegraphics[scale=.25, frame]{para9}
+&
+\includegraphics[scale=.25, frame]{para92}
+\end{tabular}
+\caption{We may use texture pictures for cube letters that are organized in stacked floors and the floors together can be rotated around all three directions. Textúrázhatjuk a négyzet betűket, melyek egymásra épülő emeletekbe vannak szervezve, ahol az emeletek együtt mindhárom irányban forgathatóak.}
+\label{figpara9}
+\end{figure}
+
+\begin{figure}[h]
+\begin{tabular}{ll}
+\includegraphics[scale=.25, frame]{para112}
+&
+\includegraphics[scale=.25, frame]{para11}
+\end{tabular}
+\caption{On a given floor we can move with WASD as is usual in FPS. Adott emeleten az FPS-ekben szokásos WASD gombokkal mozgunk. Az FPS jellegből adódik a betűk könnyedebb kijelölése: az van kiválasztva, amelyik a legközelebb van hozzánk, vagy amelyikre nézünk.}
+\label{figpara6}
+\end{figure}
 
 \bibliographystyle{apacite}
 \bibliography{prel_para}
+
+\input{license}
 
 \end{document}

@@ -28,10 +28,8 @@
 
 
 \documentclass[a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{t1enc}
-%\def\magyarOptions{defaults=hu-min}
 \usepackage[english,magyar]{babel}
+\usepackage{fontspec}
 \usepackage{apacite}
 \usepackage{url}
 \usepackage{amsmath}
@@ -51,6 +49,11 @@
    basicstyle=\ttfamily
 }
 \usepackage{seqsplit}
+\usepackage{qtree}
+\usepackage{tikz-qtree}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usetikzlibrary{trees}
 
 \newcommand{\paradump}[1]{{\ttfamily\seqsplit{#1}}}
 \newcommand{\stick}{\rule[-.2ex]{.12em}{1.8ex}}
@@ -89,8 +92,6 @@ In this preliminary study, we have tried to construct this language.
 \end{abstract}
 }
 
-\input{license}
-
 {
 \selectlanguage{magyar} 
 
@@ -118,7 +119,7 @@ nevezzünk ezt $F(s)$-nek ami a Paszigráfia Rapszódia el\H onyelvének mondata
 \item[NDIM] Végül egy n dimenziós hiperkocka formájában vizualizáljuk az eredményt.
 \end{itemize}
 
-\subsection{First Attemptions}
+\subsection{First Attempts}
 
 \begin{itemize}
 \item[NP] Let be given a natural language sentence $s$.
@@ -368,7 +369,6 @@ Minden előállított PaRa szöveget (például egy PaRa csempézési mátrixot,
 \foreach \y in {3,...,1}
 {
 \draw (\x,3-\y) +(-.5,-.5) rectangle +(.5,.5);
-%\draw (\x,9-\y) node{\x,\y};
 }
 \draw (1,3-1) node{$2$};
 \draw (2,3-1) node{$32$};
@@ -395,7 +395,6 @@ Minden előállított PaRa szöveget (például egy PaRa csempézési mátrixot,
 \foreach \y in {9,...,1}
 {
 \draw (\x,9-\y) +(-.5,-.5) rectangle +(.5,.5);
-%\draw (\x,9-\y) node{\x,\y};
 }
 \draw (1,9-1) node{$2$};
 \draw (2,9-1) node{$32$};
@@ -614,13 +613,62 @@ PaRa 3D
 
 \end{pelda}
 
+\subsubsection{Inheritance}
+
+
+\subsection{Second Attempts}
+
+
+\begin{tikzpicture}
+\tikzset{frontier/.style={distance from root=200pt}}
+\tikzset{execute at begin node=\strut}
+\tikzset{edge from parent/.style=
+{draw, edge from parent path={(\tikzparentnode.south)
+-- +(0,-8pt)
+-| (\tikzchildnode)}}}
+\Tree 
+[.F  
+	[.QVF 
+		$\forall$ x [.QVF 
+							$\forall$ y 	[.FCF 
+												[.FCF
+												 	[.AF Eg\'er x ] $\wedge$ [.AF Macska y ]
+												]	
+												$\supset$ [.AF Ut\'al x y ]
+											] 
+					]
+	]
+]
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\tikzset{grow'=right, level distance=40pt}
+\tikzset{frontier/.style={distance from root=260pt}}
+\tikzset{execute at begin node=\strut}
+\tikzset{every tree node/.style={anchor=base west}}
+\tikzset{edge from parent/.style= 
+            {thick, draw, edge from parent fork right}}
+\Tree 
+[.F  
+	[.QVF 
+		$\forall$ x [.QVF 
+							$\forall$ y 	[.FCF 
+												[.FCF
+												 	[.AF Eg\'er x ] $\wedge$ [.AF Macska y ]
+												]	
+												$\supset$ [.AF Ut\'al x y ]
+											] 
+					]
+	]
+]
+\end{tikzpicture}
 
 
 
 \bibliographystyle{apacite}
 \bibliography{prel_para}
 
-
-
+\input{license}
 
 \end{document}
