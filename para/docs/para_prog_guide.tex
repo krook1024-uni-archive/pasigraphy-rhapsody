@@ -703,6 +703,33 @@ Ezekkel a címkékkel eldobható gyors prototípus modelleket alkotunk meg, s a 
 \draw[color=black] (0.5,1.91) node {=};
 \end{tikzpicture}
 \end{tcolorbox}
+
+\begin{prologbox}
+sebesseg(robotautom, 40).
+maxseb(robotautom, 60).
+elotte(robotautom, semmi, 0, 0).
+savkozep(robotautom, 6).
+
+gyorsithat(X) :- sebesseg(X, V), maxseb(X, VMAX), V<VMAX.
+balrahuz(X) :- savkozep(X, R), R<0.
+jobbrahuz(X) :- savkozep(X, R), R>0.
+szabadUt(X) :- elotte(X, semmi, 0, 0). 
+
+gy(X, Ret) :- gyorsithat(X), !, Ret is 1; Ret is 0.
+bh(X, Ret) :- balrahuz(X), !, Ret is 1; Ret is 0.
+jh(X, Ret) :- jobbrahuz(X), !, Ret is 1; Ret is 0.
+sz(X, Ret) :- szabadUt(X), !, Ret is 1; Ret is 0.
+
+do(X, Akcio) :-
+  length(HuzalozottVezerles, 5),
+  member(ctrl(1,_,_,1, gyorsits), HuzalozottVezerles),
+  member(ctrl(_,1,_,1, jobbraTarts), HuzalozottVezerles),    
+  member(ctrl(_,_,1,1, balraTarts), HuzalozottVezerles), 
+  member(ctrl(_,_,_,0, lassits), HuzalozottVezerles),
+  gy(X, Ret1),  bh(X, Ret2),  jh(X, Ret3),  sz(X, Ret4),  
+  member(ctrl(Ret1,Ret2,Ret3,Ret4, Akcio), HuzalozottVezerles).
+\end{prologbox}
+
   
 \section{Esport nyelv}
 
