@@ -10,4 +10,4 @@ közötti kommunikációt, ergó ez az esport kultúra nyelve.
 
 * Visualization of the Language of the Esports Culture: A Preliminary Study/Az esport kultúra nyelvének vizualizációja: egy előtanulmány
 * Construction of the Language of the Esports Culture: A Preliminary Study/Az esport kultúra nyelvének megalkotása: egy előtanulmány
-* A PaRa formalization of the Lord's Prayer and the "Hello, World" C program/A Miatyánk és a "Helló, Világ!" program egy PaRa formalizációja
+* A PaRa formalization of the Lord's Prayer, the Asimov's Three Laws of Robotics and the "Hello, World" C program/A Miatyánk, a robotika Asimov-féle három törvényének és a "Helló, Világ!" program egy PaRa formalizációja
