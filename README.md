@@ -11,7 +11,8 @@ A Paszigráfia Rapszódia egy olyan mesterséges nyelv kialakítására törekv�
 kezdeményezés, mely lehetővé teszi a homunkulusz és a mesterséges homunkulusz 
 közötti kommunikációt, ergó ez [az esport kultúra nyelve](https://gitlab.com/nbatfai/pasigraphy-rhapsody/blob/master/para/docs/para_prog_guide.pdf).
 
-Háttér olvasmány: [Esport kultúra: a mesterséges intelligencia kognitív evolúciós értelmezése](https://gitlab.com/nbatfai/pasigraphy-rhapsody/blob/master/para/docs/hungarian_mitel.pdf)
+Háttér olvasmány: 
+* [Esport kultúra: a mesterséges intelligencia kognitív evolúciós értelmezése](https://gitlab.com/nbatfai/pasigraphy-rhapsody/blob/master/para/docs/hungarian_mitel.pdf)
 * [Az esport kultúra, avagy a magyar lehet-e a mesterséges intelligencia nyelve?](https://bhaxor.blog.hu/2019/07/31/lehet-e_a_magyar_a_mesterseges_intelligencia_nyelve)
 
 ## Docs/Doksik:
