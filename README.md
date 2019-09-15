@@ -16,9 +16,8 @@ Háttér olvasmány: [Esport kultúra: a mesterséges intelligencia kognitív ev
 
 ## Docs/Doksik:
 
-* [Visualization of the Language of the Esports Culture: A Preliminary Study](https://gitlab.com/nbatfai/pasigraphy-rhapsody/blob/master/para/docs/vis_prel_para.pdf)/
-* [Az esport kultúra nyelvének vizualizációja: egy előtanulmány](https://gitlab.com/nbatfai/pasigraphy-rhapsody/blob/master/para/docs/vis_prel_para.pdf)
-* [Construction of the Language of the Esports Culture: A Preliminary Study](https://gitlab.com/nbatfai/pasigraphy-rhapsody/blob/master/para/docs/con_prel_para.pdf)/
-* [Az esport kultúra nyelvének megalkotása: egy előtanulmány](https://gitlab.com/nbatfai/pasigraphy-rhapsody/blob/master/para/docs/con_prel_para.pdf)
+* [Visualization of the Language of the Esports Culture: A Preliminary Study](https://gitlab.com/nbatfai/pasigraphy-rhapsody/blob/master/para/docs/vis_prel_para.pdf) / [Az esport kultúra nyelvének vizualizációja: egy előtanulmány](https://gitlab.com/nbatfai/pasigraphy-rhapsody/blob/master/para/docs/vis_prel_para.pdf)
+* [Construction of the Language of the Esports Culture: A Preliminary Study](https://gitlab.com/nbatfai/pasigraphy-rhapsody/blob/master/para/docs/con_prel_para.pdf) / [Az esport kultúra nyelvének megalkotása: egy előtanulmány](https://gitlab.com/nbatfai/pasigraphy-rhapsody/blob/master/para/docs/con_prel_para.pdf)
 * A PaRa formalization of the Lord's Prayer, the Asimov's Three Laws of Robotics and the "Hello, World" C program/A Miatyánk, a robotika Asimov-féle három törvényének és a "Helló, Világ!" program egy PaRa formalizációja
-* [The PaRa formalization](https://gitlab.com/nbatfai/pasigraphy-rhapsody/blob/master/para/docs/para_prog_guide.pdf)/[A PaRa formalizáció](https://gitlab.com/nbatfai/pasigraphy-rhapsody/blob/master/para/docs/para_prog_guide.pdf) 
+* [The PaRa formalization](https://gitlab.com/nbatfai/pasigraphy-rhapsody/blob/master/para/docs/para_prog_guide.pdf) / [A PaRa formalizáció](https://gitlab.com/nbatfai/pasigraphy-rhapsody/blob/master/para/docs/para_prog_guide.pdf) 
+ 
