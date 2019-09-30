@@ -1,0 +1,569 @@
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Arch Linux)  (format=lualatex 2019.9.8)  30 SEP 2019 13:07
+ restricted system commands enabled.
+**hungarian_mitel.tex
+(./hungarian_mitel.tex
+LaTeX2e <2018-12-01>
+Lua module: luaotfload-main 2019-02-14 2.96 luaotfload entry point
+Lua module: luaotfload-init 2019-02-14 2.96 luaotfload submodule / initializatio
+n
+Lua module: lualibs 2019-02-14 2.64 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2019-02-14 2.64 ConTeXt Lua libraries -- extended c
+ollection.
+Lua module: luaotfload-log 2019-02-14 2.96 luaotfload submodule / logging
+Lua module: luaotfload-parsers 2019-02-14 2.96 luaotfload submodule / filelist
+Lua module: luaotfload-configuration 2019-02-14 2.96 luaotfload submodule / conf
+ig file reader
+luaotfload | conf : Root cache directory is /home/b1/.texlive/texmf-var/luatex-c
+ache/generic/names.
+luaotfload | init : Loading fontloader “fontloader-2019-02-14.lua” from kpse
+-resolved path “/usr/share/texmf-dist/tex/luatex/luaotfload/fontloader-2019-02
+-14.lua”.
+Lua-only attribute luaotfload@state = 1
+Lua-only attribute luaotfload@noligature = 2
+Lua-only attribute luaotfload@syllabe = 3
+luaotfload | init : Context OpenType loader version “3.107”
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Lua module: luaotfload-loaders 2019-02-14 2.96 luaotfload submodule / callback h
+andling
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua module: luaotfload-database 2019-02-14 2.96 luaotfload submodule / database
+Lua module: luaotfload-colors 2019-02-14 2.96 luaotfload submodule / color
+Lua-only attribute luaotfload_color_attribute = 4
+Lua module: luaotfload-resolvers 2019-02-14 2.96 luaotfload submodule / resolver
+s
+luaotfload | conf : Root cache directory is /home/b1/.texlive/texmf-var/luatex-c
+ache/generic/names.
+Lua module: luaotfload-features 2019-02-14 2.96 luaotfload submodule / features
+Lua module: luaotfload-letterspace 2019-02-14 2.96 luaotfload submodule / color
+Lua module: luaotfload-auxiliary 2019-02-14 2.96 luaotfload submodule / auxiliar
+y functions
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
+.
+luaotfload | main : initialization completed in 0.053 seconds
+(/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from /home/b1/.texlive/texmf-var/lu
+atex-cache/generic/names/luaotfload-names.luc)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+! Undefined control sequence.
+<recently read> \pdfoutput 
+           
+l.2 \pdfoutput
+            =1
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \pdfoutput=
+             1
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) (/usr/share/texmf-dist/tex/latex/base/t1enc.sty
+Package: t1enc 1994/06/01 Standard LaTeX package
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 47.
+
+(/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2019/04/03 3.29 The Babel package
+
+(/usr/share/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2019/04/03 3.29 Babel switching mechanism
+)
+(/usr/share/texmf-dist/tex/generic/babel/luababel.def
+\l@dumylang=\language2
+Package babel Info: Non-standard hyphenation setup on input line 114.
+\l@nohyphenation=\language3
+\l@german-x-2019-04-04=\language4
+\l@ngerman-x-2019-04-04=\language5
+\l@afrikaans=\language6
+\l@ancientgreek=\language7
+\l@ibycus=\language8
+\l@arabic=\language9
+\l@armenian=\language10
+\l@basque=\language11
+\l@belarusian=\language12
+\l@bulgarian=\language13
+\l@catalan=\language14
+\l@churchslavonic=\language15
+\l@coptic=\language16
+\l@croatian=\language17
+\l@czech=\language18
+\l@danish=\language19
+\l@dutch=\language20
+\l@ukenglish=\language21
+\l@usenglishmax=\language22
+\l@esperanto=\language23
+\l@estonian=\language24
+\l@ethiopic=\language25
+\l@farsi=\language26
+\l@finnish=\language27
+\l@french=\language28
+\l@friulan=\language29
+\l@galician=\language30
+\l@georgian=\language31
+\l@german=\language32
+\l@ngerman=\language33
+\l@swissgerman=\language34
+\l@monogreek=\language35
+\l@greek=\language36
+\l@hungarian=\language37
+\l@icelandic=\language38
+\l@assamese=\language39
+\l@bengali=\language40
+\l@gujarati=\language41
+\l@hindi=\language42
+\l@kannada=\language43
+\l@malayalam=\language44
+\l@marathi=\language45
+\l@oriya=\language46
+\l@panjabi=\language47
+\l@pali=\language48
+\l@tamil=\language49
+\l@telugu=\language50
+\l@indonesian=\language51
+\l@interlingua=\language52
+\l@irish=\language53
+\l@italian=\language54
+\l@kurmanji=\language55
+\l@latin=\language56
+\l@classiclatin=\language57
+\l@liturgicallatin=\language58
+\l@latvian=\language59
+\l@lithuanian=\language60
+\l@mongolian=\language61
+\l@mongolianlmc=\language62
+\l@bokmal=\language63
+\l@nynorsk=\language64
+\l@occitan=\language65
+\l@piedmontese=\language66
+\l@polish=\language67
+\l@portuguese=\language68
+\l@romanian=\language69
+\l@romansh=\language70
+\l@russian=\language71
+\l@sanskrit=\language72
+\l@serbian=\language73
+\l@serbianc=\language74
+\l@slovak=\language75
+\l@slovenian=\language76
+\l@spanish=\language77
+\l@swedish=\language78
+\l@thai=\language79
+\l@turkish=\language80
+\l@turkmen=\language81
+\l@ukrainian=\language82
+\l@uppersorbian=\language83
+\l@welsh=\language84
+)
+(/usr/share/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2019/04/03 3.29 Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+
+(/usr/share/texmf-dist/tex/generic/babel/luababel.def))
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)
+(/usr/share/texmf-dist/tex/generic/babel-hungarian/magyar.ldf
+Language: magyar 2019/01/14 v1.5c Magyar (Hungarian) support for babel
+\c@enumv=\count89
+Package babel Info: Making ; an active character on input line 2791.
+Package babel Info: Making ! an active character on input line 2793.
+Package babel Info: Making ? an active character on input line 2799.
+Package babel Info: Making : an active character on input line 2801.
+Package babel Info: Making ` an active character on input line 2819.
+\c@footnote@add=\count90
+\c@footnote@ch=\count91
+
+(/usr/share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-hu.tex
+UTF-8 Hungarian hyphenation patterns
+(/usr/share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-hu.tex))))
+(/usr/share/texmf-dist/tex/latex/apacite/apacite.sty
+Package: apacite 2013/07/21 v6.03 APA citation
+\c@BibCnt=\count92
+\bibleftmargin=\skip43
+\bibindent=\skip44
+\bibparsep=\skip45
+\bibitemsep=\skip46
+\biblabelsep=\skip47
+)
+(/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip48
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen104
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen105
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count93
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count94
+\leftroot@=\count95
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count96
+\DOTSCASE@=\count97
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count98
+\c@MaxMatrixCols=\count99
+\dotsspace@=\muskip11
+\c@parentequation=\count100
+\dspbrk@lvl=\count101
+\tag@help=\toks17
+\row@=\count102
+\column@=\count103
+\maxfields@=\count104
+\andhelp@=\toks18
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks19
+\multlinegap=\skip49
+\multlinetaggap=\skip50
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+) (./hungarian_mitel.aux)
+\openout1 = hungarian_mitel.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+\c@maskedRefs=\count105
+
+
+Package apacite Warning: No suitable language definition file (magyar.apc) found
+.
+
+(/usr/share/texmf-dist/tex/latex/base/article.cls
+LaTeX Info: Redefining \cal on input line 496.
+LaTeX Info: Redefining \mit on input line 497.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 22.
+ (/usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+[1
+
+Missing character: There is no ű (U+0171) in font ec-lmr9!
+Missing character: There is no ő (U+0151) in font ec-lmr9!
+Missing character: There is no ő (U+0151) in font ec-lmr9!
+Missing character: There is no ő (U+0151) in font ec-lmr9!
+Missing character: There is no ő (U+0151) in font ec-lmr9!
+Missing character: There is no ő (U+0151) in font ec-lmr9!
+Missing character: There is no ő (U+0151) in font ec-lmr9!
+Missing character: There is no ő (U+0151) in font ec-lmr9!
+Missing character: There is no ő (U+0151) in font ec-lmr9!
+] [2
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr8!
+Missing character: There is no ő (U+0151) in font ec-lmr8!
+Missing character: There is no ő (U+0151) in font ec-lmr8!
+]
+Underfull \hbox (badness 1533) in paragraph at lines 52--52
+ [][]\T1/lmr/m/n/8 100 osz-tály-ba so-rolt, osz-tá-lyon-ként 600 ké-pet tar
+-tal-ma-zó ta-ní-tó és teszt kép-
+ []
+
+[3
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr8!
+Missing character: There is no ” (U+201D) in font ec-lmr8!
+Missing character: There is no ő (U+0151) in font ec-lmr8!
+Missing character: There is no „ (U+201E) in font ec-lmr8!
+Missing character: There is no ” (U+201D) in font ec-lmr8!
+Missing character: There is no „ (U+201E) in font ec-lmr8!
+Missing character: There is no ” (U+201D) in font ec-lmr8!
+Missing character: There is no ű (U+0171) in font ec-lmr8!
+] [4
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr8!
+Missing character: There is no ű (U+0171) in font ec-lmr8!
+] [5
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr8!
+Missing character: There is no „ (U+201E) in font ec-lmr8!
+Missing character: There is no ” (U+201D) in font ec-lmr8!
+Missing character: There is no ű (U+0171) in font ec-lmr8!
+] [6
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no – (U+2013) in font ec-lmr10!
+Missing character: There is no – (U+2013) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr10!
+Missing character: There is no ” (U+201D) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr8!
+Missing character: There is no ” (U+201D) in font ec-lmr8!
+] (./hungarian_mitel.bbl [7
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ű (U+0171) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no ő (U+0151) in font ec-lmr10!
+Missing character: There is no – (U+2013) in font ec-lmr10!
+Missing character: There is no „ (U+201E) in font ec-lmr8!
+Missing character: There is no ” (U+201D) in font ec-lmr8!
+]) [8] (./hungarian_mitel.aux))
+
+Here is how much of LuaTeX's memory you used:
+ 3461 strings out of 494300
+ 100000,662416 words of node,token memory allocated
+ 821 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 31 glue, 4 kern, 1 glyph, 37 attribute, 54 glue_spe
+c, 37 attribute_list, 1 write nodes
+   avail lists: 2:562,3:120,4:44,5:411,6:21,7:8221,8:74,9:204,10:31,11:1109
+ 7587 multiletter control sequences out of 65536+600000
+ 57 fonts using 3696135 bytes
+ 28i,10n,35p,2990b,456s stack positions out of 5000i,500n,10000p,200000b,100000s
+{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf-dist/fonts
+/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts
+/type1/public/lm/lmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pf
+b></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/
+fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr
+6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf-di
+st/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/l
+mr9.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/share/texm
+f-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/lm/lmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt8.pfb>
+Output written on hungarian_mitel.pdf (9 pages, 393519 bytes).
+
+PDF statistics: 104 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
+
