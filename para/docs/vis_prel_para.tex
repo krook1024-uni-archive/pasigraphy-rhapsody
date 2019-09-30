@@ -1,4 +1,4 @@
-% Esport Language (PaRa) , first experiments 
+% Esport Language (PaRa) , first experiments
 % This is a rapid prototype for planning Pasigraphy Rhapsody (Paszigráfia Rapszódia, PaRa)
 %
 % vis_prel_para.tex
@@ -47,10 +47,20 @@
 \usepackage{csquotes}
 \usepackage{graphicx}
 
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes.symbols}
+
+\definecolor{myblack}{RGB}{46,52,64}
+\definecolor{mygray}{RGB}{59,66,82}
+\definecolor{myorange}{RGB}{208,135,112}
+\definecolor{mycyan}{RGB}{94,129,172}
+\definecolor{myyellow}{RGB}{235,203,139}
+\definecolor{mypink}{RGB}{180,142,173}
+
 \newcommand{\paradump}[1]{{\ttfamily\seqsplit{#1}}}
 
-\newcommand\N[1]{\directlua{N(#1) }} 
-\newcommand\D[3]{\directlua{D(#1,#2,#3) }} 
+\newcommand\N[1]{\directlua{N(#1) }}
+\newcommand\D[3]{\directlua{D(#1,#2,#3) }}
 \newcommand\prelparaIID[1]{\directlua{para2D(#1)}}
 \newcommand\prelparaIIID[2]{\directlua{para3D(#1,#2)}}
 
@@ -72,12 +82,12 @@ A Paszigráfia Rapszódia \cite{PARAREPO}, vagy röviden PaRa egy olyan mesters�
 \end{abstract}
 
 {
-\selectlanguage{english} 
+\selectlanguage{english}
 \begin{abstract}
 The Pasigraphy Rhapsody \cite{PARAREPO}, or shortly PaRa (from it's Hungarian name Paszigr\'afia Rapsz\'odia) is an initiative to develop an artificial language that is intended to allow communication between the Homunculus and the Artificial Homunculus, ergo, it is the language of the esport culture \cite{MITEL}. In this preliminary study, we investigate some possibilities of visualization of Pasigraphy Rhapsody. Its intuitive base comes from SMNIST images \cite{SMNIST}, where the numerosity of dots must be recognized in images. But it should be noticed that in this case the numerosity does not matter but the exact position of the dots.
 \end{abstract}
 }
- 
+
 \section{Introduction}
 
 The sentences of PaRa are n-dimensional hypercubes \cite{CONPARA}.
@@ -103,7 +113,7 @@ The sentences of PaRa are n-dimensional hypercubes \cite{CONPARA}.
 
 \subsubsection{A 3D \LuaLaTeX -based visualization}
 
-At the moment, we are experimenting with multiple TikZ based visualizations. The first one uses slant\footnote{The idea of using yslant and xslant to achieve a 3D effect like appearance comes from Stefan Kottwitz's \textquote{Sudoku 3D cube} example \url{http://www.texample.net/tikz/examples/sudoku-3d-cube/}.} and shift transformations. 
+At the moment, we are experimenting with multiple TikZ based visualizations. The first one uses slant\footnote{The idea of using yslant and xslant to achieve a 3D effect like appearance comes from Stefan Kottwitz's \textquote{Sudoku 3D cube} example \url{http://www.texample.net/tikz/examples/sudoku-3d-cube/}.} and shift transformations.
 
 \begin{tikzpicture}[thick, scale=2, every node/.style={scale=2}]
 \prelparaIIID{1}{"3:4:3:0:1:2:2:3:4:10:2:0:9:9:0:8:2:1:6:6:1:6:2:1:5:5:1:8:2:1:7:7:1:4:2:1:3:3:1:4:2:1:3:3:1:10:2:1:7:7:1:6:2:1:5:5:1"}

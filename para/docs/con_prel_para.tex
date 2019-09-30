@@ -1,4 +1,4 @@
-% Esport Language (PaRa) , first experiments 
+% Esport Language (PaRa) , first experiments
 % This is a rapid prototype for planning Pasigraphy Rhapsody (Paszigráfia Rapszódia, PaRa)
 %
 % con_prel_para.tex
@@ -24,7 +24,7 @@
 %
 % con_prel_para.tex
 % Working title: Construction of the Language of the Esports Culture: A Preliminary Study
-% 
+%
 
 
 \documentclass[a4paper]{article}
@@ -55,11 +55,21 @@
 \usepackage{tikz-qtree}
 \usetikzlibrary{trees}
 
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes.symbols}
+
+\definecolor{myblack}{RGB}{46,52,64}
+\definecolor{mygray}{RGB}{59,66,82}
+\definecolor{myorange}{RGB}{208,135,112}
+\definecolor{mycyan}{RGB}{94,129,172}
+\definecolor{myyellow}{RGB}{235,203,139}
+\definecolor{mypink}{RGB}{180,142,173}
+
 \newcommand{\paradump}[1]{{\ttfamily\seqsplit{#1}}}
 \newcommand{\stick}{\rule[-.2ex]{.12em}{1.8ex}}
 
-\newcommand\N[1]{\directlua{N(#1) }} 
-\newcommand\D[3]{\directlua{D(#1,#2,#3) }} 
+\newcommand\N[1]{\directlua{N(#1) }}
+\newcommand\D[3]{\directlua{D(#1,#2,#3) }}
 \newcommand\prelparaIID[1]{\directlua{para2D(#1)}}
 \newcommand\prelparaIIID[2]{\directlua{para3D(#1,#2)}}
 
@@ -81,19 +91,19 @@
 \maketitle
 
 \begin{abstract}
-A Paszigráfia Rapszódia \cite{PARAREPO}, vagy röviden PaRa egy olyan mesterséges nyelv kialakítására törekv\H o kezdeményezés, mely lehetővé teszi a homunkulusz és a mesterséges homunkulusz közötti kommunikációt, ergó ez az esport kultúra nyelve \cite{MITEL}. Ebben az el\H otanulmányban megpróbálkozunk ennek a nyelvnek a megalkotásával. 
+A Paszigráfia Rapszódia \cite{PARAREPO}, vagy röviden PaRa egy olyan mesterséges nyelv kialakítására törekv\H o kezdeményezés, mely lehetővé teszi a homunkulusz és a mesterséges homunkulusz közötti kommunikációt, ergó ez az esport kultúra nyelve \cite{MITEL}. Ebben az el\H otanulmányban megpróbálkozunk ennek a nyelvnek a megalkotásával.
 \end{abstract}
 
 {
-\selectlanguage{english} 
+\selectlanguage{english}
 \begin{abstract}
-The Pasigraphy Rhapsody \cite{PARAREPO}, or shortly PaRa (from it's Hungarian name Paszigr\'afia Rapsz\'odia) is an initiative to develop an artificial language that is intended to allow communication between the Homunculus and the Artificial Homunculus, ergo, it is the language of the esport culture \cite{MITEL}. 
+The Pasigraphy Rhapsody \cite{PARAREPO}, or shortly PaRa (from it's Hungarian name Paszigr\'afia Rapsz\'odia) is an initiative to develop an artificial language that is intended to allow communication between the Homunculus and the Artificial Homunculus, ergo, it is the language of the esport culture \cite{MITEL}.
 In this preliminary study, we have tried to construct this language.
 \end{abstract}
 }
 
 {
-\selectlanguage{magyar} 
+\selectlanguage{magyar}
 
 \section{Bevezetés}
 
@@ -101,7 +111,7 @@ A PaRa vizualizációjának \cite{VISPARA} alapját az SMNIST képek \cite{SMNIS
 }
 
 {
-\selectlanguage{english} 
+\selectlanguage{english}
 \section{Introduction}
 
 The intuitive base of visualization of PaRa \cite{VISPARA} comes from SMNIST images \cite{SMNIST}, where the numerosity of dots must be recognized in images. But it should be noticed that in the case of PaRa the numerosity does not matter but the exact position of the dots.
@@ -111,7 +121,7 @@ The intuitive base of visualization of PaRa \cite{VISPARA} comes from SMNIST ima
 
 \begin{itemize}
 \item[NP] Legyen adott egy természetes nyelv\H u $s$ mondat.
-\item[FOL] Próbálkozzunk meg $s$ els\H orend\H u logikai formalizálásával, 
+\item[FOL] Próbálkozzunk meg $s$ els\H orend\H u logikai formalizálásával,
 nevezzünk ezt $F(s)$-nek ami a Paszigráfia Rapszódia el\H onyelvének mondata lesz. Ez azt jelenti, hogy $s$ jelentését meg kell próbálnunk kifejezni a PaRa el\H onyelvén. Itt arra rá kell mutatnunk, hogy ez a folyamat bem algoritmizálható. Ezt a lépést mindig a humán játékos hajtja végre.
 \item[TILE] Majd rajzoljuk át $F(s)$-t a PaRa csempéz\H o rácsba.
 \item[NUM] Convert cells of the tiling grid into unique numbers.
@@ -123,12 +133,12 @@ nevezzünk ezt $F(s)$-nek ami a Paszigráfia Rapszódia el\H onyelvének mondata
 
 \begin{itemize}
 \item[NP] Let be given a natural language sentence $s$.
-\item[FOL] Try to find a first order logic formalization for $s$. Let's called it $F(s)$ that is a sentence of the proto-language of Pasigraphy Rhapsody. 
-This means that the meaning of $s$ must be tried to express in the proto-language of PaRa. 
-It should be noticed that this process cannot be algorithmized. 
+\item[FOL] Try to find a first order logic formalization for $s$. Let's called it $F(s)$ that is a sentence of the proto-language of Pasigraphy Rhapsody.
+This means that the meaning of $s$ must be tried to express in the proto-language of PaRa.
+It should be noticed that this process cannot be algorithmized.
 This step is always performed by the human player. But the following steps labelled by TILE, NUM, SMNIST and NDIM can be fully automated.
-\item[TILE] Then draw $F(s)$ in the form of PaRa tiling grid. 
-\item[NUM] Convert cells of the tiling grid into unique numbers. 
+\item[TILE] Then draw $F(s)$ in the form of PaRa tiling grid.
+\item[NUM] Convert cells of the tiling grid into unique numbers.
 \item[SMNIST] Convert these unique numbers into SMNIST codes.
 \item[NDIM] Finally visualize the results as an n-dimensional hypercube.
 \end{itemize}
@@ -155,7 +165,7 @@ Mice hate cats. &
 \begin{tikzpicture}[thick,scale=.6, every node/.style={scale=.6}]
 \prelparaIIID{1}{"3:2:1:1:0:3:2:1:0:2:0:2:1:1:0:1:0:2:2:0:1:1:1:3:2:1:0:2:0:1:0:2:2:0:0:0:1:3:1:0:1"}
 \end{tikzpicture}
- \\\hline 
+ \\\hline
 \end{tabular}
 \end{center}
 \end{example}
@@ -225,7 +235,7 @@ Here we use the notations of Albert Drag\'alin  \cite{ALBERT} and the book \cite
 \end{bnf}
 
 {
-\selectlanguage{magyar} 
+\selectlanguage{magyar}
 
 \begin{pelda}
 Formalizáljuk a következő természetes nyelvi kijelentést!
@@ -234,9 +244,9 @@ $$
 $$
 $$\forall \text{Állat.}x \forall \text{Állat.}y ( \text{P.Egér}(x) \wedge \text{P.Macska}(y)  \supset \text{P.Utál}(x, y))$$
 Kicsit jobban megfeleltetve a grammatikának azt írnánk, hogy
-$$\forall (1.1) \forall (1.2) ( 
-(P.1 (1.1)) \wedge (P.2 (1.2))  
-\supset 
+$$\forall (1.1) \forall (1.2) (
+(P.1 (1.1)) \wedge (P.2 (1.2))
+\supset
 (P.3(1.1, 1.2))
 )$$
 szóval mindent szépen számozgatunk, itt például minden változót és prédikátumot külön, a felbukkanásuk rendjében. Ha ez a mondat volt a "Helló, Világ!"\footnote{Tehát az els\H o formalizált mondatunk.} mondatunk, akkor most éppen ezeket a táblázatokat kell karban tartanunk:
@@ -252,13 +262,13 @@ szóval mindent szépen számozgatunk, itt például minden változót és préd
 \end{center}
 
 Méginkább közelítve a grammatikához pedig ezt írnánk
-$$\forall (\stick . \stick) \forall (\stick . \stick \ \stick) ( 
-(P . \stick (\stick . \stick)) \wedge (P . \stick \ \stick (\stick . \stick \ \stick))  
-\supset 
+$$\forall (\stick . \stick) \forall (\stick . \stick \ \stick) (
+(P . \stick (\stick . \stick)) \wedge (P . \stick \ \stick (\stick . \stick \ \stick))
+\supset
 (P . \stick \ \stick \ \stick(\stick . \stick, \stick . \stick \ \stick))
 )$$
-ami még mindig elég pongyola, de pontosabbá már a grammmatikával együttesen 
-történ\H o pontosítással tehetnénk (például a zárójelezés tekintetében), de nem tesszük, mert a formalizálásoknál úgyis maradunk az els\H o formánál, s számozni is egészen máshogy fogunk. Tehát a grammatikával mindössze annyit rögzítettünk, hogy elvben megszámlálhatóan végtelen sok típust, változót, kontanst, prédikátumot és függvényt akarunk felhasználni. 
+ami még mindig elég pongyola, de pontosabbá már a grammmatikával együttesen
+történ\H o pontosítással tehetnénk (például a zárójelezés tekintetében), de nem tesszük, mert a formalizálásoknál úgyis maradunk az els\H o formánál, s számozni is egészen máshogy fogunk. Tehát a grammatikával mindössze annyit rögzítettünk, hogy elvben megszámlálhatóan végtelen sok típust, változót, kontanst, prédikátumot és függvényt akarunk felhasználni.
 \end{pelda}
 }
 
@@ -341,16 +351,16 @@ $\wedge$ & 4 \\
 \hline
 $\vee$ & 5 \\
 \hline
-$\supset$ & 6 \\\hline 
+$\supset$ & 6 \\\hline
 \end{tabular}
 \end{center}
 Maradt még megszámlálhatóan végtelen prédikátum, függvény és típus nevünk, illetve minden megszámlálható típuson belül ugyancsak megszámlálható konstans és változó nevünk. Ezeket is könnyen számba vehetjük például Péter Rózsa könyvéb\H ol a transzfinit indukció bevezetése kapcsán említett, a természetes számokat megszámlálható sok diszjunk részhamazra bontását bemutató példájával, azaz
 
 \begin{itemize}
-\item A $PaRa_\text{text}=\{7, 9, 11, 13, 15, 17, \dots \}$ halmaz, avagy a páratlan számokból kiszedve a terminális bet\H uk kódjait, jelöli a már el\H oállított PaRa szövegek indexeit. 
-Minden előállított PaRa szöveget (például egy PaRa csempézési mátrixot, vagy a formalizált PaRa előnyelvi formulákat) megjegyzünk egy listában, ennek indexét adja a páratlan szám eképpen: $\frac{\text{páratlan szám} - 1}{2}-2$.  
-\item A $PaRa_\text{pred}=\{10, 14, 18, 22, 26, \dots \}$ halmaz, avagy a kett\H onek csak az els\H o hatványával oszthatóak (megint csak kiszedve a terminálisok) jelölik a PaRa prédikátumokat. 
-\item A $PaRa_\text{fn}=\{12, 20, 28, 36, 44, \dots \}$ halmaz, avagy a kett\H onek legfeljebb csak a második hatványával oszthatóak (ugyancsak kiszedve a terminálisok) jelölik a PaRa függvényeket. 
+\item A $PaRa_\text{text}=\{7, 9, 11, 13, 15, 17, \dots \}$ halmaz, avagy a páratlan számokból kiszedve a terminális bet\H uk kódjait, jelöli a már el\H oállított PaRa szövegek indexeit.
+Minden előállított PaRa szöveget (például egy PaRa csempézési mátrixot, vagy a formalizált PaRa előnyelvi formulákat) megjegyzünk egy listában, ennek indexét adja a páratlan szám eképpen: $\frac{\text{páratlan szám} - 1}{2}-2$.
+\item A $PaRa_\text{pred}=\{10, 14, 18, 22, 26, \dots \}$ halmaz, avagy a kett\H onek csak az els\H o hatványával oszthatóak (megint csak kiszedve a terminálisok) jelölik a PaRa prédikátumokat.
+\item A $PaRa_\text{fn}=\{12, 20, 28, 36, 44, \dots \}$ halmaz, avagy a kett\H onek legfeljebb csak a második hatványával oszthatóak (ugyancsak kiszedve a terminálisok) jelölik a PaRa függvényeket.
 \item A $PaRa_\text{srt}=\{8, 24, 40, 56, 72, \dots \}$ halmaz, avagy a kett\H onek legfeljebb csak a harmadik hatványával oszthatóak jelölik a PaRa típusokat.
 \item A $PaRa_{c_1}=\{16, 48, 80, 112, 144, \dots \}$ halmaz, avagy a kett\H onek legfeljebb csak a negyedik hatványával oszthatóak jelölik a PaRa els\H o típusának végtelen sok konstansát.
 \item A $PaRa_{v_1}=\{32, 96, 160, 224, 288, \dots \}$ halmaz, avagy a kett\H onek legfeljebb csak a ötödik hatványával oszthatóak jelölik a PaRa els\H o típusának végtelen sok változóját.
@@ -419,32 +429,32 @@ Minden előállított PaRa szöveget (például egy PaRa csempézési mátrixot,
 
 \begin{lstlisting}[breaklines]
 n: 4 k: 1 index: 1 1: (0,0)
-n: 4 k: 1 index: 2 1: (1,0) 
-n: 4 k: 1 index: 3 1: (0,1) 
-n: 4 k: 1 index: 4 1: (1,1) 
-***** 
+n: 4 k: 1 index: 2 1: (1,0)
+n: 4 k: 1 index: 3 1: (0,1)
+n: 4 k: 1 index: 4 1: (1,1)
+*****
 n: 4 k: 2 index: 5 1: (0,0) 2: (1,0)
 n: 4 k: 2 index: 6 1: (0,0) 2: (0,1)
 n: 4 k: 2 index: 7 1: (0,0) 2: (1,1)
 n: 4 k: 2 index: 8 1: (1,0) 2: (0,1)
 n: 4 k: 2 index: 9 1: (1,0) 2: (1,1)
 n: 4 k: 2 index: 10 1: (0,1) 2: (1,1)
-***** 
+*****
 n: 4 k: 3 index: 11 1: (0,0) 2: (1,0) 3: (0,1)
 n: 4 k: 3 index: 12 1: (0,0) 2: (1,0) 3: (1,1)
 n: 4 k: 3 index: 13 1: (0,0) 2: (0,1) 3: (1,1)
 n: 4 k: 3 index: 14 1: (1,0) 2: (0,1) 3: (1,1)
-***** 
+*****
 n: 9 k: 1 index: 15 1: (0,0)
-n: 9 k: 1 index: 16 1: (1,0) 
-n: 9 k: 1 index: 17 1: (2,0) 
-n: 9 k: 1 index: 18 1: (0,1) 
-n: 9 k: 1 index: 19 1: (1,1) 
-n: 9 k: 1 index: 20 1: (2,1) 
-n: 9 k: 1 index: 21 1: (0,2) 
-n: 9 k: 1 index: 22 1: (1,2) 
-n: 9 k: 1 index: 23 1: (2,2) 
-***** 
+n: 9 k: 1 index: 16 1: (1,0)
+n: 9 k: 1 index: 17 1: (2,0)
+n: 9 k: 1 index: 18 1: (0,1)
+n: 9 k: 1 index: 19 1: (1,1)
+n: 9 k: 1 index: 20 1: (2,1)
+n: 9 k: 1 index: 21 1: (0,2)
+n: 9 k: 1 index: 22 1: (1,2)
+n: 9 k: 1 index: 23 1: (2,2)
+*****
 n: 9 k: 2 index: 24 1: (0,0) 2: (1,0)
 n: 9 k: 2 index: 25 1: (0,0) 2: (2,0)
 n: 9 k: 2 index: 26 1: (0,0) 2: (0,1)
@@ -481,7 +491,7 @@ n: 9 k: 2 index: 56 1: (2,1) 2: (2,2)
 n: 9 k: 2 index: 57 1: (0,2) 2: (1,2)
 n: 9 k: 2 index: 58 1: (0,2) 2: (2,2)
 n: 9 k: 2 index: 59 1: (1,2) 2: (2,2)
-***** 
+*****
 n: 9 k: 3 index: 60 1: (0,0) 2: (1,0) 3: (2,0)
 n: 9 k: 3 index: 61 1: (0,0) 2: (1,0) 3: (0,1)
 n: 9 k: 3 index: 62 1: (0,0) 2: (1,0) 3: (1,1)
@@ -626,16 +636,16 @@ PaRa 3D
 {draw, edge from parent path={(\tikzparentnode.south)
 -- +(0,-8pt)
 -| (\tikzchildnode)}}}
-\Tree 
-[.F  
-	[.QVF 
-		$\forall$ x [.QVF 
-							$\forall$ y 	[.FCF 
+\Tree
+[.F
+	[.QVF
+		$\forall$ x [.QVF
+							$\forall$ y 	[.FCF
 												[.FCF
 												 	[.AF Eg\'er x ] $\wedge$ [.AF Macska y ]
-												]	
+												]
 												$\supset$ [.AF Ut\'al x y ]
-											] 
+											]
 					]
 	]
 ]
@@ -647,18 +657,18 @@ PaRa 3D
 \tikzset{frontier/.style={distance from root=260pt}}
 \tikzset{execute at begin node=\strut}
 \tikzset{every tree node/.style={anchor=base west}}
-\tikzset{edge from parent/.style= 
+\tikzset{edge from parent/.style=
             {thick, draw, edge from parent fork right}}
-\Tree 
-[.F  
-	[.QVF 
-		$\forall$ x [.QVF 
-							$\forall$ y 	[.FCF 
+\Tree
+[.F
+	[.QVF
+		$\forall$ x [.QVF
+							$\forall$ y 	[.FCF
 												[.FCF
 												 	[.AF Eg\'er x ] $\wedge$ [.AF Macska y ]
-												]	
+												]
 												$\supset$ [.AF Ut\'al x y ]
-											] 
+											]
 					]
 	]
 ]

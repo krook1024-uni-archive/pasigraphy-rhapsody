@@ -1,4 +1,4 @@
-% Esport Language (PaRa) , first experiments 
+% Esport Language (PaRa) , first experiments
 % This is a rapid prototype for planning Pasigraphy Rhapsody (Paszigráfia Rapszódia, PaRa)
 %
 % con_prel_para.tex
@@ -24,9 +24,9 @@
 %
 % con_prel_para.tex
 % Working title: Construction of the Language of the Esports Culture: A Preliminary Study
-% 
+%
 \documentclass[a4paper]{article}
-\usepackage[english, magyar]{babel} 
+\usepackage[english, magyar]{babel}
 \usepackage{fontspec}
 \usepackage{apacite}
 \usepackage{url}
@@ -58,8 +58,18 @@
 \tcbuselibrary{skins}
 \tcbuselibrary{minted}
 
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes.symbols}
+
+\definecolor{myblack}{RGB}{46,52,64}
+\definecolor{mygray}{RGB}{59,66,82}
+\definecolor{myorange}{RGB}{208,135,112}
+\definecolor{mycyan}{RGB}{94,129,172}
+\definecolor{myyellow}{RGB}{235,203,139}
+\definecolor{mypink}{RGB}{180,142,173}
+
 %
-% The following code is based on the 
+% The following code is based on the
 % Thomas F. Sturm, The tcolorbox package Manual for version 4.20 (2019/03/02)
 % http://www.ctan.org/pkg/tcolorbox
 %
@@ -76,7 +86,7 @@ rectangle ([xshift=5mm]frame.north west);\end{tcbclipinterior}}}
 \usepackage{csquotes}
 
 %
-% The following code is based on the 
+% The following code is based on the
 % Thomas F. Sturm, The tcolorbox package Manual for version 4.20 (2019/03/02)
 % http://www.ctan.org/pkg/tcolorbox
 %
@@ -92,8 +102,8 @@ overlay={\foreach \x in {9cm,10.2cm} {
 \newcommand{\paradump}[1]{{\ttfamily\seqsplit{#1}}}
 \newcommand{\stick}{\rule[-.2ex]{.12em}{1.8ex}}
 
-\newcommand\N[1]{\directlua{N(#1) }} 
-\newcommand\D[3]{\directlua{D(#1,#2,#3) }} 
+\newcommand\N[1]{\directlua{N(#1) }}
+\newcommand\D[3]{\directlua{D(#1,#2,#3) }}
 \newcommand\prelparaIID[1]{\directlua{para2D(#1)}}
 \newcommand\prelparaIIID[2]{\directlua{para3D(#1,#2)}}
 
@@ -159,14 +169,14 @@ coltitle=red!60!black}]
 \begin{titlepage}
 \pagecolor{cyan}
 \vspace*{\fill}
-	\centering	
+	\centering
 
 	{\color{gray!10!white}\Huge\bf ESPORT NYELV}
 	\\
 	\vspace{.2cm}
 	{\color{black!80!white}\Large\lsstyle \  Paszigráfia Rapszódia}
 	\vspace{1cm}
-	
+
 	\begin{tikzpicture}[thick, scale=2, every node/.style={scale=2}]
 \prelparaIIID{1}{"3:4:3:0:1:2:2:3:4:10:2:0:9:9:0:8:2:1:6:6:1:6:2:1:5:5:1:8:2:1:7:7:1:4:2:1:3:3:1:4:2:1:3:3:1:10:2:1:7:7:1:6:2:1:5:5:1"}
 \prelparaIIID{2} {"4:4:3:1:2:2:2:3:4:10:2:0:9:9:0:8:2:1:6:6:1:6:2:1:5:5:1:8:2:1:7:7:1:4:2:1:3:3:1:4:2:1:3:3:1:2:1:1:1:6:2:1:5:5:1:4:1:1:1:8:2:2:2:4:4:2:1:1:1"}
@@ -176,7 +186,7 @@ coltitle=red!60!black}]
 \vspace{1cm}
 
 	{\color{black!80!white}\Large\textls[655]{Pasigraphy Rhapsody}}
-\\	
+\\
 	\vspace{.2cm}
 	{\color{gray!10!white}\Huge\bf ESPORTS LANGUAGE}
 \vspace*{\fill}
@@ -193,7 +203,7 @@ coltitle=red!60!black}]
 	\and
 	Bátfai N\'andor Benj\'amin\\
 	\texttt{batfai.nandi@gmail.com}\\
-    Debreceni Egyetem Kossuth Lajos Gyakorló Általános Iskola\\	
+    Debreceni Egyetem Kossuth Lajos Gyakorló Általános Iskola\\
 	}
 \date{
     \today
@@ -217,10 +227,10 @@ The Pasigraphy Rhapsody \cite{PARAREPO}, or shortly PaRa (from it's Hungarian na
 
 \section{Bevezetés}
 
-Az esport kultúra a donaldi \cite{Donald01} epizodikus, mimetikus, mitikus és teoretikus kultúrális szintek elképzelt következő fázisa \cite{MITEL}, \cite{SMNIST}. A teoretikus szinten kifejlődhetett a neumanni értelemben vett \textquote{önreprodukáló automata}, a központi idegrendszerrel és az emberi kultúrával, mint hordozóval összemérhető bonyolultságú értelmező program, a homunkulusz, amelyet mindannyian, mint a saját tudatunkat tapasztalunk meg. Amikor mesterséges intelligenciát szeretnénk létrehozni, akkor ezt a folyamatot akarjuk megismételni, ezért tekinthetjük ezt úgy, hogy a homunkulusz törekszik egy mesterséges homunkulusz kialakítására. Ezzel ennek a donaldi víziónak szeretnénk megfelelni: \textquote{az elme új architektúráját építjük meg, olyat, amely hatékonyabb reprezentációs eszközökkel rendelkezik, és képes saját magát megérteni} \cite[328]{Donald01}. 
+Az esport kultúra a donaldi \cite{Donald01} epizodikus, mimetikus, mitikus és teoretikus kultúrális szintek elképzelt következő fázisa \cite{MITEL}, \cite{SMNIST}. A teoretikus szinten kifejlődhetett a neumanni értelemben vett \textquote{önreprodukáló automata}, a központi idegrendszerrel és az emberi kultúrával, mint hordozóval összemérhető bonyolultságú értelmező program, a homunkulusz, amelyet mindannyian, mint a saját tudatunkat tapasztalunk meg. Amikor mesterséges intelligenciát szeretnénk létrehozni, akkor ezt a folyamatot akarjuk megismételni, ezért tekinthetjük ezt úgy, hogy a homunkulusz törekszik egy mesterséges homunkulusz kialakítására. Ezzel ennek a donaldi víziónak szeretnénk megfelelni: \textquote{az elme új architektúráját építjük meg, olyat, amely hatékonyabb reprezentációs eszközökkel rendelkezik, és képes saját magát megérteni} \cite[328]{Donald01}.
 
-Miért kellene ehhez egy új donaldi átmenet? A matematikában, az emberiség legstabilabbnak tartott építményében felbukkanó ellentmondások kapcsán elindult kutatások egyértelművé tették, hogy a mitikus (beszélt nyelvi) kultúra szintjén ezeket nem lehet feloldani. Az elméleti kultúra szintjén, a matematikai logika nyelvén lehet egyáltalán érdemben beszélni róluk. Lássuk konkrét példákat is ellentmondásokra! 
-A \cite{ALBERT} könyvet követve a következő két antinómiát mutatjuk be: ha még  nem vagy benne a logikában, akkor az Evbulid paradoxont (kék pirula\footnote{Ha nem tudod, mi a kék és mi a piros pirula, akkor ideje megnézni a Mártix című mozit!}) olvasd most csak el, jópár hét múlva gyere lapozz vissza 
+Miért kellene ehhez egy új donaldi átmenet? A matematikában, az emberiség legstabilabbnak tartott építményében felbukkanó ellentmondások kapcsán elindult kutatások egyértelművé tették, hogy a mitikus (beszélt nyelvi) kultúra szintjén ezeket nem lehet feloldani. Az elméleti kultúra szintjén, a matematikai logika nyelvén lehet egyáltalán érdemben beszélni róluk. Lássuk konkrét példákat is ellentmondásokra!
+A \cite{ALBERT} könyvet követve a következő két antinómiát mutatjuk be: ha még  nem vagy benne a logikában, akkor az Evbulid paradoxont (kék pirula\footnote{Ha nem tudod, mi a kék és mi a piros pirula, akkor ideje megnézni a Mártix című mozit!}) olvasd most csak el, jópár hét múlva gyere lapozz vissza
 
 \begin{tcolorbox}[
 title={Evbulid paradoxon, i.e. IV. sz\'azad},
@@ -234,7 +244,7 @@ subtitle style={boxrule=0.4pt,
 colback=yellow!50!blue!25!white} ]
 Azt mondom: \textquote{\bf Hazudok.} K\'et lehet\H os\'eg van:
 \begin{itemize}
-\item Ha igazat mondok (nem hazudok), akkor hazudok. 
+\item Ha igazat mondok (nem hazudok), akkor hazudok.
 \item Ha hazudok (hazudom, hogy hazudok), akkor igazat mondok.
 \end{itemize}
 \cite[183]{ALBERT}
@@ -242,11 +252,11 @@ Azt mondom: \textquote{\bf Hazudok.} K\'et lehet\H os\'eg van:
 
 
 a Russel antinómia bemutatására (piros pirula\footnote{Jóval polulárisabban, mondjuk egy algebra kurzus szintjén azt mondanánk, hogy Cantor \'ota vannak ugye a halmazok, például a $H=\{1,2,3\}$ és általában bármely összességet tekinthetünk halmaznak. Ennek a $H$ halmaznak egy tulajdonsága, hogy elemk\'ent önmagát nem tartalmazza, azaz $H \notin H$. Vegy\"uk most az \"osszes halmazok halmaz\'at, mivel ez minden halmazt tartalmaz, így önmagát is, azaz feltéve, hogy $A$-val jelöljük, ez a tulajdonság jellemzi: $A \in A$. Majd tekintsük azt a halmazt, amely az összes ilyen tulajdonsággal nem rendelkező halmazt tartalmazza, tehát azokat, amelyek önmagukat elemként nem tartalmazzák, jelölésében legyen ez a $D$ halmaz. Kérdés, hogy $D$ eleme-e $D$-nek, tehát önmagát tartalmazza-e elemként? \begin{itemize}
-\item $D \in D \Rightarrow D \notin D$ 
+\item $D \in D \Rightarrow D \notin D$
 \item $D \notin D \Rightarrow D \in D$
 \end{itemize}
 \cite[16]{Szendrei}
-})! 
+})!
 
 
 \begin{tcolorbox}[
@@ -259,25 +269,25 @@ coltitle=red!30!black,
 fonttitle=\bfseries,
 subtitle style={boxrule=0.4pt,
 colback=yellow!50!red!25!white} ]
-Az $M^+$ na\'iv halmazelm\'elet form\'alis axiomatikus elm\'eletben a   
-$\forall z ( z\in \{y\vert \varphi(y) \} \equiv \varphi(z))$ absztrakci\'o axi\'om\'ab\'ol kiindulva, a $\varphi(z)=\neg (z \in z)$ absztrakci\'ot alkalmazva 
+Az $M^+$ na\'iv halmazelm\'elet form\'alis axiomatikus elm\'eletben a
+$\forall z ( z\in \{y\vert \varphi(y) \} \equiv \varphi(z))$ absztrakci\'o axi\'om\'ab\'ol kiindulva, a $\varphi(z)=\neg (z \in z)$ absztrakci\'ot alkalmazva
 \[
-M^+ \vdash \forall z (z \in \{x\vert x\notin x\} \equiv z \notin z)  
+M^+ \vdash \forall z (z \in \{x\vert x\notin x\} \equiv z \notin z)
 \]
 amib\H ol a $\{x\vert x\notin x\}$ Russel halmazr\'ol a
 \[
-M^+ \vdash \{x\vert x\notin x\} \in \{x\vert x\notin x\} \equiv \{x\vert x\notin x\} \notin \{x\vert x\notin x\}  
+M^+ \vdash \{x\vert x\notin x\} \in \{x\vert x\notin x\} \equiv \{x\vert x\notin x\} \notin \{x\vert x\notin x\}
 \]
 t\"orv\'eny vezethet\H o le.
 
 Viszont puszt\'an abb\'ol, hogy $\vDash \neg ( A \equiv \neg A)$ vagy a $\{x\vert x\notin x\} \in \{x\vert x\notin x\} \equiv \{x\vert x\notin x\} \notin \{x\vert x\notin x\}$ formula tagad\'as\'at tov\'abb alak\'itva (az $M^+$ logikai axi\'om\'ait felhaszn\'alva) kapjuk, hogy
 \[
-M^+ \vdash \neg (\{x\vert x\notin x\} \in \{x\vert x\notin x\} \equiv \{x\vert x\notin x\} \notin \{x\vert x\notin x\})  
+M^+ \vdash \neg (\{x\vert x\notin x\} \in \{x\vert x\notin x\} \equiv \{x\vert x\notin x\} \notin \{x\vert x\notin x\})
 \]
 Ezzel az ekvivalenciát és annak tagadását is levezettük az $M^+$ elm\'eletben, tehát az $M^+$ elm\'elet nem ellentmond\'asmentes. Ez a Russel antin\'omia \cite[182]{ALBERT}.
 \end{tcolorbox}
 
-Mi persze nem a matematika megalapozása körüli csatákba történő bekapcsolódásra gyúrunk, hanem egy univerzális mesterséges nyelvet szeretnénk széles körben elterjeszteni. Ezért a legjobb fegyverünkhöz nyúlunk, ami van: a matek legősibb, de mai formájában legmodernebb ágához, a matematikai logikához. Ezzel most egyetemeken találkoznak a matematikus és informatikus hallgatók. A donaldi idézett vízió megvalósításához ezen megtanulni beszélni az első lépés a mi olvasatunkban. S mivel az egyetem egy nyelv szempontjából nem tömegbázis, a megtanulásának és a modern matematikai gondolkodás elterjesztésének eszközei a tömegesen játszott elektronikus játékok lehetnek. Ez a Paszigráfia Rapszódia létrehozásának motivációja, hogy legyen egy olyan matematikai logikai alapú mesterséges, de természetesen a nemzeti anyanyelveinkre épülő nyelvünk, amely játékok alapjául is szolgálhat, s még egyben a tudomány egyetemes nyelve is lehet. 
+Mi persze nem a matematika megalapozása körüli csatákba történő bekapcsolódásra gyúrunk, hanem egy univerzális mesterséges nyelvet szeretnénk széles körben elterjeszteni. Ezért a legjobb fegyverünkhöz nyúlunk, ami van: a matek legősibb, de mai formájában legmodernebb ágához, a matematikai logikához. Ezzel most egyetemeken találkoznak a matematikus és informatikus hallgatók. A donaldi idézett vízió megvalósításához ezen megtanulni beszélni az első lépés a mi olvasatunkban. S mivel az egyetem egy nyelv szempontjából nem tömegbázis, a megtanulásának és a modern matematikai gondolkodás elterjesztésének eszközei a tömegesen játszott elektronikus játékok lehetnek. Ez a Paszigráfia Rapszódia létrehozásának motivációja, hogy legyen egy olyan matematikai logikai alapú mesterséges, de természetesen a nemzeti anyanyelveinkre épülő nyelvünk, amely játékok alapjául is szolgálhat, s még egyben a tudomány egyetemes nyelve is lehet.
 
 Az elektronikus játékok térnyerése egyértelmű tendencia, a szülő, nagyszülő nem érti mit jelent a játékfogyasztás megugrása vagy, hogy mi az esport. Talán nagy rendezettségű szellemi táplálék, amire a játékos agya mohón veti rá magát \cite{STHEOR}. Mindenesetre ha sikerülne PaRa alapú játékokkal tömeges szinten játszani, az az idézett donaldi vízió mentén olyan szinten fejleszthetné tovább az emberiség kognitív szintjét, amihez képes a nagyszülői esport \textquote{értetelenkedés} eltörpül.
 
@@ -333,13 +343,13 @@ coltitle=red!60!black}]
 \end{tikzpicture}
 \end{tcolorbox}
 
-A $\exists x Macska(x)$ mondat olvasása: \textquote{Létezik olyan x, hogy macska x} vagy röviden csak \textquote{Létezik x, macska x}. Itt az $x$ \textbf{változó} helyére odaképzelhet\"unk konkrét objektumokat a a modellb\H ol, s ha azok valóban macskák, akkor a $Macska()$ \textbf{prédikátum} ezt majd igaznak állítja. 
+A $\exists x Macska(x)$ mondat olvasása: \textquote{Létezik olyan x, hogy macska x} vagy röviden csak \textquote{Létezik x, macska x}. Itt az $x$ \textbf{változó} helyére odaképzelhet\"unk konkrét objektumokat a a modellb\H ol, s ha azok valóban macskák, akkor a $Macska()$ \textbf{prédikátum} ezt majd igaznak állítja.
 
 A $\exists x Macska(x)$ mondat azt mondja, hogy \textquote{Vannak macskák}. Ez az állítás az egyik modellben lehet igaz (ott, ahol valóban vannak macskák) egy másik modellben meg, ahol nincsenek macskák, ott hamis.
 
 \parafop{Cirmi macska}{Cirmi is a cat}{$Macska(Cirmi)$}
 
-A $Macska(Cirmi)$ mondatban nincs változó, hanem egy \textbf{konstansról} beszél, konkrétan azt mondja, hogy \textquote{Cirmi egy macska}. 
+A $Macska(Cirmi)$ mondatban nincs változó, hanem egy \textbf{konstansról} beszél, konkrétan azt mondja, hogy \textquote{Cirmi egy macska}.
 
 \parafop{Cirmi \'es Szutyok macsk\'ak}{Cirmi and Szutyok are cats}{$Macska(Cirmi) \wedge Macska(Szutyok)$}
 
@@ -351,9 +361,9 @@ Megtorpanhatunk, amikor \textquote{Az egerek nem macskák} mondatot szeretnénk 
 
 A $\forall x$ olvasása: \textquote{Minden x}. Itt az $x$ hely\'ere a modell \"osszes objektum\'at kell odak\'epzeln\"unk. A $\neg$ a tagad\'as, olvas\'asa \textquote{nem}, a $\supset$ az implikáció (logikai k\"ovetkezmény), olvas\'asa \textquote{akkor} vagy \textquote{-b\H ol k\"ovetkezik}. Eg\'eszen pontosan: $Eger(x) \supset \neg Macska(x)$ annyit mond, hogy \textquote{\textbf{ha} x eg\'er \textbf{akkor} x nem macska} vagy \textquote{\textbf{ha} x eg\'er \textbf{akkor ebb\H ol k\"ovetkezik, hogy} x nem macska}.
 
-Gyakori hiba \textquote{A kutyák h\H us\'egesek} mondat ilyen ford\'it\'asa:  
+Gyakori hiba \textquote{A kutyák h\H us\'egesek} mondat ilyen ford\'it\'asa:
 $\forall x (Kutya(x) \wedge \text{\it H\H us\'eges}(x))$, mert ez azt mondja, hogy $\forall x Kutya(x) \wedge \forall y\text{\it H\H us\'eges}(y)$ azaz minden objektum kutya \'es minden objektum h\H us\'eges. Mi viszont nem ezt akartuk mondani, hanem csak a kuty\'akkal foglalkozva azt, hogy ha egy objektum kutya, akkor h\H us\'eges, teh\'at a helyes ford\'it\'as:
-  
+
 \parafop{A kutyák h\H us\'egesek}{Dogs are loyal}{$\forall x (Kutya(x) \supset \text{\it H\H us\'eges}(x))$}
 
 Az \textquote{és}-es konstrukció inkább az egzisztenciális kvantort jellemzi, a
@@ -378,7 +388,7 @@ M\'egink\'abb r\'amutat a gondolkodásmód megváltoztatás\'anak sz\"uks\'egess
 
 \parafop{A macsk\'ak a h\'aztet\H on vannak}{Cats are on the roof}{$\forall x (Macska(x) \supset \text{\it Tet{\H o}nVan}(x))$}
 
-\textquote{A macsk\'ak a tet\H on vannak} azt jelenti, hogy \textquote{ha x macska akkor x a tet\H on van}, a FOP mondat ennek t\"uk\"orford\'it\'asa. Ha viszont ott a \textquote{csak} sz\'ocska, akkor m\'ar azt jelenti, hogy ha felmegyek a padl\'asra, f\'elretolok egy cserepet \'es leveszek egy j\'osz\'agot, akkor egy macska lesz a kezemben, Teh\'at, ha a tet\H on van x akkor macska x, egyszer\H uen helyet cser\'elt az implik\'aci\'o k\'et tagja \'es ez a ford\'it\'as:  
+\textquote{A macsk\'ak a tet\H on vannak} azt jelenti, hogy \textquote{ha x macska akkor x a tet\H on van}, a FOP mondat ennek t\"uk\"orford\'it\'asa. Ha viszont ott a \textquote{csak} sz\'ocska, akkor m\'ar azt jelenti, hogy ha felmegyek a padl\'asra, f\'elretolok egy cserepet \'es leveszek egy j\'osz\'agot, akkor egy macska lesz a kezemben, Teh\'at, ha a tet\H on van x akkor macska x, egyszer\H uen helyet cser\'elt az implik\'aci\'o k\'et tagja \'es ez a ford\'it\'as:
 
 \parafop{Csak a macsk\'ak vannak a h\'aztet\H on}{Only cats are on the roof}{$\forall x (\text{\it Tet{\H o}nVan}(x) \supset Macska(x))$}
 
@@ -388,7 +398,7 @@ Nem fogunk most sokat id\H ozni itt, de a k\"ovetkez\"o k\'et p\'elda tanulm\'an
 
 \parafop{Minden természetes számnál van nagyobb természetes szám}{For every natural numbers there exists a greater one}{$\forall x \exists y(x < y)$}
 
-Csak a k\'et azonos hat\'ok\"or\H u kvantor sorrend\'et v\'altoztatjuk a formul\'aban:  
+Csak a k\'et azonos hat\'ok\"or\H u kvantor sorrend\'et v\'altoztatjuk a formul\'aban:
 
 \parafop{Van legnagyobb természetes szám}{There is the greatest natural number}{$\exists y\forall x (x < y)$}
 
@@ -400,7 +410,7 @@ Hasonló szerkezetű mondatok az $Apja(x, y)$, $x\text{-nek} \ Apja\ \text{az}\ 
 
 \subsection{V\'altozatoss\'ag}
 
-Az \textquote{Akárki bagózik, mindenki egészségének rovására megy} (vagy nagyjából \textquote{Ha  valaki dohányzik, mindenki egészségét veszélyezteti}, \textquote{Bárki bagózik, mindenkinek romlik az egészsége}, \dots) mondat ford\'it\'asaival mutassuk meg, hogy a matematikai gondolkod\'asm\'od saj\'atos, de v\'altozatoss\'ag\'aval is tud gy\"ony\"ork\"odtetni. 
+Az \textquote{Akárki bagózik, mindenki egészségének rovására megy} (vagy nagyjából \textquote{Ha  valaki dohányzik, mindenki egészségét veszélyezteti}, \textquote{Bárki bagózik, mindenkinek romlik az egészsége}, \dots) mondat ford\'it\'asaival mutassuk meg, hogy a matematikai gondolkod\'asm\'od saj\'atos, de v\'altozatoss\'ag\'aval is tud gy\"ony\"ork\"odtetni.
 
 \parafop{Akárki bagózik, mindenki egészségének rovására megy}{If anyone smoke then everyone's health is at risk}{$\forall x (\text{\it Bag\'ozik}(x) \supset \forall y \text{\it Eg\'eszs\'egeRomlik}(y))$}
 
@@ -410,7 +420,7 @@ De figyelj\"uk meg, hogy ha az egzisztenci\'alis kvantor hat\'ok\"or\'et kicsit 
 
 \parafop{Mindenkihez van valaki, aki ha bag\'ozik, \'art neki.}{For everyone there is somebody who, if he smokes then he will endanger his health}{$\forall y (\exists x (\text{\it Bag\'ozik}(x) \supset \text{\it Eg\'eszs\'egeRomlik}(y)))$}
 
-Ezt meg\'erteni a sz\'amok vil\'aga pont $\forall x \exists y(x < y)$ formul\'aja mint\'aj\'ara lehet, mert kvantorok hasonl\'o helyzetben vannak a most vizsg\'alt $\forall y (\exists x (\text{\it Bag\'ozik}(x) \supset \text{\it Eg\'eszs\'egeRomlik}(y)))$ esetben. Ami ugye azt mondja, hogy mindenkihez van olyan, aki ha bag\'ozik, akkor az \'art neki. V\'eve az al\'abbi 4 szem\'elyes modellt 
+Ezt meg\'erteni a sz\'amok vil\'aga pont $\forall x \exists y(x < y)$ formul\'aja mint\'aj\'ara lehet, mert kvantorok hasonl\'o helyzetben vannak a most vizsg\'alt $\forall y (\exists x (\text{\it Bag\'ozik}(x) \supset \text{\it Eg\'eszs\'egeRomlik}(y)))$ esetben. Ami ugye azt mondja, hogy mindenkihez van olyan, aki ha bag\'ozik, akkor az \'art neki. V\'eve az al\'abbi 4 szem\'elyes modellt
 
 \begin{center}
 \begin{tabular}{|c|c|}\hline
@@ -423,11 +433,11 @@ Matyi&N\'andi\\\hline
 \end{center}
 
 l\'athatjuk, hogy ebben a modellben ez igaz \'all\'it\'as lenne, viszont a $\exists x \text{\it Bag\'ozik}(x) \supset \forall y \text{\it Eg\'eszs\'egeRomlik}(y)$ meg nem lenne, mert nem lenne olyan szem\'ely, aki ha bag\'ozik, az mindenkinek \'artana, mivel az \'art\'as csak az  im\'enti t\'abla szerint menne.
-  
+
 T\'erj\"unk m\'eg vissza az eredeti \textquote{Akárki bagózik, mindenki egészségének rovására megy}  mondathoz \'es adjunk tov\'abbi formaliz\'al\'asi alternat\'iv\'akat!
 
 \parafop{Akárki bagózik, mindenki egészségének rovására megy}{If anyone smoke then everyone's health is at risk}{$\forall x ( \forall y (\text{\it Bag\'ozik}(x) \supset \text{\it Eg\'eszs\'egeRomlik}(y)))$}
-  
+
 \parafop{Akárki bagózik, mindenki egészségének rovására megy}{If anyone smoke then everyone's health is at risk}{$\forall y ( \forall x (\text{\it Bag\'ozik}(x) \supset \text{\it Eg\'eszs\'egeRomlik}(y)))$}
 
 \parafop{Akárki bagózik, mindenki egészségének rovására megy}{If anyone smoke then everyone's health is at risk}{$\exists x \text{\it Bag\'ozik}(x) \supset \forall y \text{\it Eg\'eszs\'egeRomlik}(y)$}
@@ -608,12 +618,12 @@ nagyapja(X, Z) :- apja(X, Y), (apja(Y, Z); anyja(Y, Z)).
 
 \subsection{Irodalom}
 
-Ebben a bevezető részben közérthetően terveztük tárgyalni a 
-\cite{CONPARA} doksi útkereséséből kikristályosodó elemeket. Konkrétan itt természetes nyelvű mondatok elsőrendű 
-logikai átírásával foglalkoztunk, ehhez jó kiindulást ad a 
-a \cite{ALBERT} és a \cite{RusselNorvig} könyv, de szinte bármelyik egyetem 
-logika vagy mesterséges intelligencia kurzusainak anyagai között találunk ilyen 
-példákat. 
+Ebben a bevezető részben közérthetően terveztük tárgyalni a
+\cite{CONPARA} doksi útkereséséből kikristályosodó elemeket. Konkrétan itt természetes nyelvű mondatok elsőrendű
+logikai átírásával foglalkoztunk, ehhez jó kiindulást ad a
+a \cite{ALBERT} és a \cite{RusselNorvig} könyv, de szinte bármelyik egyetem
+logika vagy mesterséges intelligencia kurzusainak anyagai között találunk ilyen
+példákat.
 
 \begin{itemize}
 \item Ernest Davis: Guide to Expressing Facts in a First-Order Language, \url{https://cs.nyu.edu/faculty/davise/ai/folguide.pdf}
@@ -623,7 +633,7 @@ példákat.
 \item \url{http://un.uobasrah.edu.iq/lectures/2561.pdf}
 \item \url{https://people.umass.edu/partee/NZ_2006/LING310_TEST1_with_answers%20.pdf}, \url{https://people.umass.edu/partee/NZ_2006/More%20Answers%20for%20Practice%20in%20Logic%20and%20HW%201.pdf}
 \item \url{https://faculty.washington.edu/smcohen/453/FOLTranslation.pdf}
-\item Pásztorné Varga Katalin, Várterész Magda, Sági Gábor: A matematikai logika alkalmazásszemléletű tárgyalása, \url{https://www.tankonyvtar.hu/hu/tartalom/tamop425/0046_a_matematikai_logika_alkalmazasszemleletu_targyalasa/adatok.html} 
+\item Pásztorné Varga Katalin, Várterész Magda, Sági Gábor: A matematikai logika alkalmazásszemléletű tárgyalása, \url{https://www.tankonyvtar.hu/hu/tartalom/tamop425/0046_a_matematikai_logika_alkalmazasszemleletu_targyalasa/adatok.html}
 \item Farkas Zsuzsa
 , Futó Iván
 , Langer Tamás
@@ -632,7 +642,7 @@ példákat.
 Prolog feladatgyűjtemény, \url{http://meskobalazs.progmat.hu/tananyagok/prolog_feladatgyujtemeny/book.html}
 \end{itemize}
 
-A bevezetést Prolog átíratokkal zártuk. Prolog tekintetében az éles kipróbálást, kísérletezést ajánljuk, például a \url{https://swish.swi-prolog.org/} lapon, ahogyan a \url{https://youtu.be/0HEgIYXNakM} streamen mutattuk. 
+A bevezetést Prolog átíratokkal zártuk. Prolog tekintetében az éles kipróbálást, kísérletezést ajánljuk, például a \url{https://swish.swi-prolog.org/} lapon, ahogyan a \url{https://youtu.be/0HEgIYXNakM} streamen mutattuk.
 
 \section{Gyakorlás}
 
@@ -645,24 +655,24 @@ anya(X) :- nő(X), gyereke(_Y, X).
 anyja(X, Y) :- nő(X), gyereke(Y, X).
 nagyapa(X) :- apja(X, Y), (apja(Y, _U); anyja(Y, _Z)).
 nagyapja(X, Z) :- apja(X, Y), (apja(Y, Z); anyja(Y, Z)).
-szülő(X) :- apa(X); anya(X).  
-szülője(X, Y) :- apja(X, Y); anyja(X, Y).  
-testvér(X, Y) :- szülője(Z, X), szülője(Z, Y), 
+szülő(X) :- apa(X); anya(X).
+szülője(X, Y) :- apja(X, Y); anyja(X, Y).
+testvér(X, Y) :- szülője(Z, X), szülője(Z, Y),
     szülője(U, X), szülője(U, Y), X\=Y, U\=Z.
-féltestvér(X, Y) :- szülője(Z, X), szülője(Z, Y), X\=Y, 
+féltestvér(X, Y) :- szülője(Z, X), szülője(Z, Y), X\=Y,
     \+ testvér(X, Y).
-unokatestvér(X, Y) :- szülője(Z, X), szülője(U, Y), X\=Y, 
+unokatestvér(X, Y) :- szülője(Z, X), szülője(U, Y), X\=Y,
     (testvér(Z, U); féltestvér(Z, U)).
 őse(X, Y) :- szülője(X, Y); (szülője(X, Z), őse(Z, Y)).
 \end{prologbox}
- 
-Gyakoroljunk tovább, de lépjünk túl a családfa modellünkön! 
- 
+
+Gyakoroljunk tovább, de lépjünk túl a családfa modellünkön!
+
 \subsection{Open Source Car Intelligence}
 
-Képzeljük el, hogy adott időpillanatokban rendelkezésre áll egy robotautó külső és belső kameráinak képe, melyeket mindenféle mélytanulásos fekete doboz MI és egyéb megoldások felcímkéznek (a sávom közepén vagyok, látok a képen zebrát, a járdán a zebra előtt álló gyalogost, a lámpa piros, az utas felszabadult). 
-Ezekkel a címkékkel eldobható gyors prototípus modelleket alkotunk meg, s a gyakorlást ezeknek a formalizásásával folytatjuk.   
-  
+Képzeljük el, hogy adott időpillanatokban rendelkezésre áll egy robotautó külső és belső kameráinak képe, melyeket mindenféle mélytanulásos fekete doboz MI és egyéb megoldások felcímkéznek (a sávom közepén vagyok, látok a képen zebrát, a járdán a zebra előtt álló gyalogost, a lámpa piros, az utas felszabadult).
+Ezekkel a címkékkel eldobható gyors prototípus modelleket alkotunk meg, s a gyakorlást ezeknek a formalizásásával folytatjuk.
+
 \begin{tcolorbox}\centering
 \begin{tikzpicture}[thick,scale=0.8, every node/.style={transform shape}]
 \draw [line width=1pt] (-9.5,1.18) circle (1.2815615474880635cm);
@@ -713,7 +723,7 @@ savkozep(robotautom, 6).
 gyorsithat(X) :- sebesseg(X, V), maxseb(X, VMAX), V<VMAX.
 balrahuz(X) :- savkozep(X, R), R<0.
 jobbrahuz(X) :- savkozep(X, R), R>0.
-szabadUt(X) :- elotte(X, semmi, 0, 0). 
+szabadUt(X) :- elotte(X, semmi, 0, 0).
 
 gy(X, Ret) :- gyorsithat(X), !, Ret is 1; Ret is 0.
 bh(X, Ret) :- balrahuz(X), !, Ret is 1; Ret is 0.
@@ -723,14 +733,14 @@ sz(X, Ret) :- szabadUt(X), !, Ret is 1; Ret is 0.
 do(X, Akcio) :-
   length(HuzalozottVezerles, 5),
   member(ctrl(1,_,_,1, gyorsits), HuzalozottVezerles),
-  member(ctrl(_,1,_,1, jobbraTarts), HuzalozottVezerles),    
-  member(ctrl(_,_,1,1, balraTarts), HuzalozottVezerles), 
+  member(ctrl(_,1,_,1, jobbraTarts), HuzalozottVezerles),
+  member(ctrl(_,_,1,1, balraTarts), HuzalozottVezerles),
   member(ctrl(_,_,_,0, lassits), HuzalozottVezerles),
-  gy(X, Ret1),  bh(X, Ret2),  jh(X, Ret3),  sz(X, Ret4),  
+  gy(X, Ret1),  bh(X, Ret2),  jh(X, Ret3),  sz(X, Ret4),
   member(ctrl(Ret1,Ret2,Ret3,Ret4, Akcio), HuzalozottVezerles).
 \end{prologbox}
 
-  
+
 \section{Esport nyelv}
 
 \input{license}
@@ -740,7 +750,7 @@ do(X, Akcio) :-
 
 \begin{titlepage}
 \pagecolor{cyan}
-	\centering	
+	\centering
 
 	\vspace{1cm}
 	{\color{gray!10!white}\Large Ne menjen a tanulás a játék rovására!}
@@ -752,8 +762,8 @@ do(X, Akcio) :-
 
 	{\color{gray!10!white}\Large Don't learn at the expense of gaming.}
 	\vspace{1cm}
-\\	
-	
+\\
+
 	{\color{black!20!white}\Huge\bf ESPORTS LANGUAGE}
 	\vspace{1cm}
 	\end{titlepage}
