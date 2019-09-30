@@ -26,47 +26,15 @@
 % Working title: Construction of the Language of the Esports Culture: A Preliminary Study
 %
 \documentclass[a4paper]{article}
-\usepackage[english, magyar]{babel}
-\usepackage{fontspec}
-\usepackage{apacite}
-\usepackage{url}
-\usepackage{amsmath}
-\usepackage{luacode}
-\directlua{require('prelpara')}
-\usepackage{tikz}
-\usetikzlibrary{positioning}
-\usepackage{url}
-\usepackage{array}
-\usepackage{metalogo}
-\usepackage[altpo]{backnaur}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{listings}
-\lstset{
-   breaklines=true,
-   basicstyle=\ttfamily
-}
-\usepackage{seqsplit}
-\usepackage{qtree}
-\usepackage{tikz-qtree}
-\usepackage{tikz}
-\usetikzlibrary{trees}
+\usepackage{preamble}
+\usepackage[letterspace=290]{microtype}
+\usepackage{tcolorbox}
 \usepackage{minted}
 \usepackage{csquotes}
 \usepackage{shellesc}
-\usepackage{tcolorbox}
+
 \tcbuselibrary{skins}
 \tcbuselibrary{minted}
-
-\usetikzlibrary{shadows.blur}
-\usetikzlibrary{shapes.symbols}
-
-\definecolor{myblack}{RGB}{46,52,64}
-\definecolor{mygray}{RGB}{59,66,82}
-\definecolor{myorange}{RGB}{208,135,112}
-\definecolor{mycyan}{RGB}{94,129,172}
-\definecolor{myyellow}{RGB}{235,203,139}
-\definecolor{mypink}{RGB}{180,142,173}
 
 %
 % The following code is based on the
@@ -81,10 +49,6 @@ colback=green!5!white,colframe=red!75!black,listing only,
 left=5mm,enhanced,
 overlay={\begin{tcbclipinterior}\fill[red!20!yellow!20!white] (frame.south west)
 rectangle ([xshift=5mm]frame.north west);\end{tcbclipinterior}}}
-
-\usepackage{minted}
-\usepackage{csquotes}
-
 %
 % The following code is based on the
 % Thomas F. Sturm, The tcolorbox package Manual for version 4.20 (2019/03/02)
@@ -98,14 +62,6 @@ overlay={\foreach \x in {9cm,10.2cm} {
 \path[fill=black] (-0.51,.0) arc (-50:240:2mm);
 \path[fill=white] (-0.64,.1) arc (0:360:.4mm);
 \end{scope}}}}}
-
-\newcommand{\paradump}[1]{{\ttfamily\seqsplit{#1}}}
-\newcommand{\stick}{\rule[-.2ex]{.12em}{1.8ex}}
-
-\newcommand\N[1]{\directlua{N(#1) }}
-\newcommand\D[3]{\directlua{D(#1,#2,#3) }}
-\newcommand\prelparaIID[1]{\directlua{para2D(#1)}}
-\newcommand\prelparaIIID[2]{\directlua{para3D(#1,#2)}}
 
 \newcommand{\parafop}[3]{
 \begin{tcolorbox}[
@@ -155,14 +111,6 @@ coltitle=red!60!black}]
 \tcbsubtitle{{#4}}
 \end{tcolorbox}
 }
-
-
-\theoremstyle{definition}
-\newtheorem{example}{Example}[section]
-\newtheorem{pelda}{Példa}[section]
-
-\usepackage[letterspace=290]{microtype}
-
 
 \begin{document}
 

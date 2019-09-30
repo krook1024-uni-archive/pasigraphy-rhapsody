@@ -1,0 +1,51 @@
+\ProvidesPackage{preamble}
+
+\usepackage[english,magyar]{babel}
+\usepackage{fontspec}
+\usepackage{apacite}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{luacode}
+\directlua{require('prelpara')}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{url}
+\usepackage{array}
+\usepackage{metalogo}
+\usepackage[altpo]{backnaur}
+\usepackage{amsthm}
+\usepackage{csquotes}
+\usepackage{listings}
+\lstset{
+   breaklines=true,
+   basicstyle=\ttfamily
+}
+\usepackage{seqsplit}
+\usepackage{qtree}
+\usepackage{tikz-qtree}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usetikzlibrary{trees}
+
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes.symbols}
+
+\definecolor{myblack}{RGB}{46,52,64}
+\definecolor{mygray}{RGB}{76,86,106}
+\definecolor{myorange}{RGB}{208,135,112}
+\definecolor{mycyan}{RGB}{94,129,172}
+\definecolor{myyellow}{RGB}{235,203,139}
+\definecolor{mypink}{RGB}{180,142,173}
+
+\newcommand{\paradump}[1]{{\ttfamily\seqsplit{#1}}}
+\newcommand{\stick}{\rule[-.2ex]{.12em}{1.8ex}}
+
+\newcommand\N[1]{\directlua{N(#1) }}
+\newcommand\D[3]{\directlua{D(#1,#2,#3) }}
+\newcommand\prelparaIID[1]{\directlua{para2D(#1)}}
+\newcommand\prelparaIIID[2]{\directlua{para3D(#1,#2)}}
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+\newtheorem{pelda}{Példa}[section]
+
