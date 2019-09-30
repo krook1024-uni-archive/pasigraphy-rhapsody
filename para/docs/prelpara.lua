@@ -45,7 +45,7 @@ function para2D(fmts)
             nod=sntnc[fmts_shift]
             tex.sprint(
             		"\\tikzstyle{shifting}=[xshift=", i,"cm]"
-					,"\\shade[shifting, left color=mygray!100, right color=myblack!100] (0,0) rectangle +(1,1);"
+					,"\\shade[shifting, left color=mygray, right color=myblack] (0,0) rectangle +(1,1);"
 					,"\\draw[shifting, step=\\N{",n,"}cm, mycyan] (0,0) grid (1,1);")
             for j = 1, nod do
             	fmts_shift = fmts_shift +1
@@ -70,48 +70,49 @@ function para3D(direct, fmts)
             fmts_shift = fmts_shift +1
             nod=sntnc[fmts_shift]
             tex.sprint(
-            "\\tikzstyle{leftslant}=[yslant=-.5, xshift=",-1+i*d[dir][1],"cm, yshift=",-1+i*d[dir][2],"cm, blur shadow={shadow blur steps=5}]"
-			,"\\tikzstyle{rightslant}=[yslant=0.5, xshift=",i*d[dir][3],"cm, yshift=",-1+i*d[dir][4],"cm, blur shadow={shadow blur steps=5}]"
-			,"\\tikzstyle{topslant}=[yslant=0.5, xslant=-1, xshift=", i*d[dir][5],"cm, yshift=", i*d[dir][6],"cm, blur shadow={shadow blur steps=5}]"
-			,"\\shade[leftslant, right color=mygray!100,left color=myblack!100] (0,0) rectangle +(1,1);"
-			,"\\draw[leftslant, step=\\N{",n,"}cm, mycyan] (0,0) grid (1,1);")
+            "\\tikzstyle{addshadow}=[blur shadow={shadow blur steps=7, shadow xshift=.1ex, shadow yshift=-.1ex}]"
+            ,"\\tikzstyle{leftslant}=[yslant=-.5, xshift=",-1+i*d[dir][1],"cm, yshift=",-1+i*d[dir][2],"cm]"
+			,"\\tikzstyle{rightslant}=[yslant=0.5, xshift=",i*d[dir][3],"cm, yshift=",-1+i*d[dir][4],"cm]"
+			,"\\tikzstyle{topslant}=[yslant=0.5, xslant=-1, xshift=", i*d[dir][5],"cm, yshift=", i*d[dir][6],"cm]"
+			,"\\shade[leftslant, right color=mygray,left color=myblack] (0,0) rectangle +(1,1);"
+			,"\\draw[addshadow, leftslant, step=\\N{",n,"}cm, mycyan] (0,0) grid (1,1);")
             for j = 1, nod do
             	fmts_shift = fmts_shift +1
             	x=sntnc[fmts_shift]
             	fmts_shift = fmts_shift +1
             	y=sntnc[fmts_shift]+1
             	tex.sprint(
-            	"\\node[leftslant, fill=myorange, anchor=north west,  inner sep=0pt,minimum size=\\N{",n,"}cm-\\pgflinewidth] at \\D{",n,"}{",x,"}{",y,"-.5*",x,"} {};")
+            	"\\node[addshadow, leftslant, fill=myorange, anchor=north west,  inner sep=0pt,minimum size=\\N{",n,"}cm-\\pgflinewidth] at \\D{",n,"}{",x,"}{",y,"-.5*",x,"} {};")
             end
             fmts_shift = fmts_shift +1
             n=sntnc[fmts_shift]
             fmts_shift = fmts_shift +1
 	        nod=sntnc[fmts_shift]
 			tex.sprint(
-				"\\shade[rightslant, right color=mygray!100,left color=myblack!100] (0,0) rectangle +(1,1);",
-				"\\draw[rightslant, step=\\N{",n,"}cm, mypink](0,0) grid (1,1);")
+				"\\shade[rightslant, right color=mygray,left color=myblack] (0,0) rectangle +(1,1);",
+				"\\draw[addshadow, rightslant, step=\\N{",n,"}cm, mypink](0,0) grid (1,1);")
 			for j = 1, nod do
             	fmts_shift = fmts_shift +1
 				x=sntnc[fmts_shift]
             	fmts_shift = fmts_shift +1
 				y=sntnc[fmts_shift]
 				tex.sprint(
-					"\\node[rightslant, fill=mycyan, anchor=south west,  inner sep=0pt,minimum size=\\N{",n,"}cm-\\pgflinewidth] at \\D{",n,"}{",x,"}{",y,"+.5*",x,"} {};")
+					"\\node[addshadow, rightslant, fill=mycyan, anchor=south west,  inner sep=0pt,minimum size=\\N{",n,"}cm-\\pgflinewidth] at \\D{",n,"}{",x,"}{",y,"+.5*",x,"} {};")
             end
             fmts_shift = fmts_shift +1
 			n=sntnc[fmts_shift]
 			fmts_shift = fmts_shift +1
             nod=sntnc[fmts_shift]
 			tex.sprint(
-				"\\shade[topslant, bottom color=mygray!100,top color=myblack!100] (0,0) rectangle +(1,1);",
-				"\\draw[topslant, step=\\N{",n,"}cm, myorange] (0,0) grid (1,1);")
+				"\\shade[topslant, bottom color=mygray,top color=myblack] (0,0) rectangle +(1,1);",
+				"\\draw[addshadow, topslant, step=\\N{",n,"}cm, myorange] (0,0) grid (1,1);")
             for j = 1, nod do
            		fmts_shift = fmts_shift +1
             	x=sntnc[fmts_shift]
             	fmts_shift = fmts_shift +1
 				y=sntnc[fmts_shift]
 				tex.sprint(
-					"\\node[topslant, fill=myyellow, anchor=south west,  inner sep=0pt,minimum size=\\N{",n,"}cm-\\pgflinewidth] at \\D{",n,"}{",y,"-",x,"}{",tonumber(y)/2,"+.5*",x,"} {};")
+					"\\node[addshadow, topslant, fill=myyellow, anchor=south west,  inner sep=0pt,minimum size=\\N{",n,"}cm-\\pgflinewidth] at \\D{",n,"}{",y,"-",x,"}{",tonumber(y)/2,"+.5*",x,"} {};")
            end
 	end
 end
