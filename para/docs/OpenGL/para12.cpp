@@ -31,10 +31,26 @@
 
 #include <iostream>
 #include <vector>
+#include <cmath>
 #include <boost/tokenizer.hpp>
 #include <GL/glut.h>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+
+// _L means LIGHT(er)
+// _D means DARK(er)
+// everything else is pretty self explanatory
+#define COLOR_LINE      0.18f,  0.20f,  0.19f
+#define COLOR_BLACK     0.18f,  0.20f,  0.25f
+#define COLOR_BLUE      0.37f,  0.51f,  0.67f
+#define COLOR_BLUE_L    0.51f,  0.63f,  0.76f
+#define COLOR_YELLOW    0.92f,  0.80f,  0.55f
+#define COLOR_YELLOW_D  0.82f,  0.53f,  0.44f
+#define COLOR_RED       0.75f,  0.38f,  0.42f
+#define COLOR_GREEN     0.64f,  0.75f,  0.55f
+#define COLOR_BROWN     0.80f,  0.82f,  0.15f
+#define COLOR_BROWN_L   0.90f,  0.90f,  0.40f
+#define COLOR_PURPLE    0.71f,  0.56f,  0.68f
 
 class PaRaCube
 {
@@ -55,7 +71,7 @@ int selectedCube = 0;
 bool selectc {true};
 bool transp {false};
 bool pic {true};
-bool mousec {true};
+bool mousec {false};        // Mouse control
 bool mousefc {false};
 bool fullscr {false};
 GLdouble fovy = 70;
@@ -124,7 +140,7 @@ void drawPaRaCube ( int idx )
 
         glBegin ( GL_QUADS );
 
-        glColor3f ( 0.818f, .900f, 0.824f );
+        glColor3f ( COLOR_BLUE_L );
 
         if ( pic ) if ( cubeLetters[idx].tex[0] != -1 ) glTexCoord2f ( 0.0f, 1.0f );
         glVertex3f ( -1.0f, 1.0f, 1.0f );
@@ -141,7 +157,7 @@ void drawPaRaCube ( int idx )
                         glBindTexture ( GL_TEXTURE_2D, texture[cubeLetters[idx].tex[1]] );
         glBegin ( GL_QUADS );
 
-        glColor3f ( 0.818f, .900f, 0.824f );
+        glColor3f ( COLOR_BLUE_L );
 
         if ( pic ) if ( cubeLetters[idx].tex[1] != -1 ) glTexCoord2f ( 0.0f, 1.0f );
         glVertex3f ( 1.0f, 1.0f, 1.0f );
@@ -157,7 +173,7 @@ void drawPaRaCube ( int idx )
                         glBindTexture ( GL_TEXTURE_2D, texture[cubeLetters[idx].tex[2]] );
         glBegin ( GL_QUADS );
 
-        glColor3f ( 0.818f, .900f, 0.824f );
+        glColor3f ( COLOR_BLUE_L );
 
         if ( pic ) if ( cubeLetters[idx].tex[2] != -1 ) glTexCoord2f ( 0.0f, 1.0f );
         glVertex3f ( -1.0f, 1.0f, 1.0f );
@@ -173,7 +189,7 @@ void drawPaRaCube ( int idx )
                         glBindTexture ( GL_TEXTURE_2D, texture[cubeLetters[idx].tex[3]] );
         glBegin ( GL_QUADS );
 
-        glColor3f ( 0.818f, .900f, 0.824f );
+        glColor3f ( COLOR_BLUE_L );
 
         if ( pic ) if ( cubeLetters[idx].tex[3] != -1 ) glTexCoord2f ( 0.0f, 1.0f );
         glVertex3f ( -1.0f, 1.0f, 1.0f );
@@ -189,7 +205,7 @@ void drawPaRaCube ( int idx )
                         glBindTexture ( GL_TEXTURE_2D, texture[cubeLetters[idx].tex[4]] );
         glBegin ( GL_QUADS );
 
-        glColor3f ( 0.818f, .900f, 0.824f );
+        glColor3f ( COLOR_BLUE_L );
 
         if ( pic ) if ( cubeLetters[idx].tex[4] != -1 ) glTexCoord2f ( 0.0f, 1.0f );
         glVertex3f ( -1.0f, 1.0f,-1.0f );
@@ -205,7 +221,7 @@ void drawPaRaCube ( int idx )
                         glBindTexture ( GL_TEXTURE_2D, texture[cubeLetters[idx].tex[5]] );
         glBegin ( GL_QUADS );
 
-        glColor3f ( 0.818f, .900f, 0.824f );
+        glColor3f ( COLOR_BLUE_L );
 
         if ( pic ) if ( cubeLetters[idx].tex[5] != -1 ) glTexCoord2f ( 0.0f, 1.0f );
         glVertex3f ( -1.0f,-1.0f, 1.0f );
@@ -219,7 +235,7 @@ void drawPaRaCube ( int idx )
         glEnd();
 
         glBegin ( GL_LINES );
-        glColor3f ( .188f, 0.209f, 0.190f );
+        glColor3f ( COLOR_LINE );
 
         for ( int i=0; i<=cubeLetters[idx].nn[0]; i++ ) {
 
@@ -237,7 +253,7 @@ void drawPaRaCube ( int idx )
         for ( int i {0}; i<cubeLetters[idx].cc[0].size() /2; ++i ) {
                 glBegin ( GL_QUADS );
 
-                glColor3f ( .82f, .15f, .15f );
+                glColor3f ( COLOR_RED );
 
                 glVertex3f ( 1.0f- ( cubeLetters[idx].cc[0][2*i]+1 ) * ( 2.0/cubeLetters[idx].nn[0] ),
                              1.0f- ( cubeLetters[idx].cc[0][2*i+1]+1 ) * ( 2.0/cubeLetters[idx].nn[0] ), 1.002f );
@@ -252,7 +268,7 @@ void drawPaRaCube ( int idx )
         }
 
         glBegin ( GL_LINES );
-        glColor3f ( .188f, 0.209f, 0.190f );
+        glColor3f ( COLOR_LINE );
 
         for ( int i=0; i<=cubeLetters[idx].nn[1]; i++ ) {
 
@@ -270,7 +286,7 @@ void drawPaRaCube ( int idx )
         for ( int i {0}; i<cubeLetters[idx].cc[1].size() /2; ++i ) {
                 glBegin ( GL_QUADS );
 
-                glColor3f ( 0.15f, .29f, .82f );
+                glColor3f ( COLOR_BLUE );
 
                 glVertex3f ( 1.002f, 1.0f-cubeLetters[idx].cc[1][2*i]* ( 2.0/cubeLetters[idx].nn[1] ),
                              1.0f- ( cubeLetters[idx].cc[1][2*i+1]+1 ) * ( 2.0/cubeLetters[idx].nn[1] ) );
@@ -285,7 +301,7 @@ void drawPaRaCube ( int idx )
         }
 
         glBegin ( GL_LINES );
-        glColor3f ( .188f, 0.209f, 0.190f );
+        glColor3f ( COLOR_LINE );
 
         for ( int i=0; i<=cubeLetters[idx].nn[2]; i++ ) {
 
@@ -303,7 +319,7 @@ void drawPaRaCube ( int idx )
         for ( int i {0}; i<cubeLetters[idx].cc[2].size() /2; ++i ) {
                 glBegin ( GL_QUADS );
 
-                glColor3f ( .309f, .820f, .150f );
+                glColor3f ( COLOR_GREEN );
 
                 glVertex3f ( 1.0f-cubeLetters[idx].cc[2][2*i]* ( 2.0/cubeLetters[idx].nn[2] ),
                              1.002f , 1.0f-cubeLetters[idx].cc[2][2*i+1]* ( 2.0/cubeLetters[idx].nn[2] ) );
@@ -318,7 +334,7 @@ void drawPaRaCube ( int idx )
         }
 
         glBegin ( GL_LINES );
-        glColor3f ( .188f, 0.209f, 0.190f );
+        glColor3f ( COLOR_LINE );
 
         for ( int i=0; i<=cubeLetters[idx].nn[3]; i++ ) {
 
@@ -335,7 +351,7 @@ void drawPaRaCube ( int idx )
 
         for ( int i {0}; i<cubeLetters[idx].cc[3].size() /2; ++i ) {
                 glBegin ( GL_QUADS );
-                glColor3f ( .804f, .820f, .150f );
+                glColor3f ( COLOR_BROWN );
 
                 glVertex3f ( -1.002f, 1.0f- ( cubeLetters[idx].cc[3][2*i]+1 ) * ( 2.0/cubeLetters[idx].nn[3] ),
                              1.0f-cubeLetters[idx].cc[3][2*i+1]* ( 2.0/cubeLetters[idx].nn[3] ) );
@@ -350,7 +366,7 @@ void drawPaRaCube ( int idx )
         }
 
         glBegin ( GL_LINES );
-        glColor3f ( .188f, 0.209f, 0.190f );
+        glColor3f ( COLOR_LINE );
 
         for ( int i=0; i<=cubeLetters[idx].nn[4]; i++ ) {
 
@@ -367,7 +383,7 @@ void drawPaRaCube ( int idx )
 
         for ( int i {0}; i<cubeLetters[idx].cc[4].size() /2; ++i ) {
                 glBegin ( GL_QUADS );
-                glColor3f ( .614f, 0.150f, 0.820f );
+                glColor3f ( COLOR_PURPLE );
 
                 glVertex3f ( 1.0f- ( cubeLetters[idx].cc[4][2*i]+1 ) * ( 2.0/cubeLetters[idx].nn[4] ),
                              1.0f-cubeLetters[idx].cc[4][2*i+1]* ( 2.0/cubeLetters[idx].nn[4] ), -1.002f );
@@ -382,7 +398,7 @@ void drawPaRaCube ( int idx )
         }
 
         glBegin ( GL_LINES );
-        glColor3f ( .188f, 0.209f, 0.190f );
+        glColor3f ( COLOR_BLUE_L );
 
         for ( int i=0; i<=cubeLetters[idx].nn[5]; i++ ) {
 
@@ -399,7 +415,7 @@ void drawPaRaCube ( int idx )
 
         for ( int i {0}; i<cubeLetters[idx].cc[5].size() /2; ++i ) {
                 glBegin ( GL_QUADS );
-                glColor3f ( .114f, .108f, .156f );
+                glColor3f ( COLOR_BLACK );
 
                 glVertex3f ( 1.0f-cubeLetters[idx].cc[5][2*i]* ( 2.0/cubeLetters[idx].nn[5] ),
                              -1.002f , 1.0f-cubeLetters[idx].cc[5][2*i+1]* ( 2.0/cubeLetters[idx].nn[5] ) );
@@ -441,7 +457,7 @@ void draw ( void )
 
         glPushMatrix();
 
-        glColor3f ( .9,.9,.4 );
+        glColor3f ( COLOR_BROWN_L );
         glBegin ( GL_QUADS );
 
         glVertex3f ( -101,-1-0.002, -101 );
@@ -455,9 +471,9 @@ void draw ( void )
                 for ( int i=-101; i<=101; i+=2 )
                         for ( int j=-101; j<=101; j+=2 ) {
                                 if ( ( i/2+j/2 ) %2 ) {
-                                        glColor3f ( .7,.8,.3 );
+                                        glColor3f ( COLOR_YELLOW );
                                 } else {
-                                        glColor3f ( .7, .5,.3 );
+                                        glColor3f ( COLOR_YELLOW_D );
                                 };
 
                                 glBegin ( GL_QUADS );
@@ -575,18 +591,18 @@ void keyboard ( unsigned char key, int keyx, int keyy )
                         glutReshapeWindow ( width, height );
                         glutPositionWindow ( 0,0 );
                 }
-        } else if ( key == 'w' ) {
+        } else if ( key == 'w' || key == 'k' ) {
                 w();
-        } else if ( key == 's' ) {
+        } else if ( key == 's' || key == 'j' ) {
                 s();
-        } else if ( key == 'a' ) {
+        } else if ( key == 'a' || key == 'h' ) {
                 a+=2.0f;
-        } else if ( key == 'd' ) {
+        } else if ( key == 'd' || key == 'l' ) {
                 a-=2.0f;
-        } else if ( key == 'q' ) {
+        } else if ( key == 'q' || key == 'J' ) {
                 yy-=1.0f;
                 y-=1.0f;
-        } else if ( key == 'e' ) {
+        } else if ( key == 'e' || key == 'K' ) {
                 yy+=1.0f;
                 y+=1.0f;
         } else if ( key == 'r' ) {

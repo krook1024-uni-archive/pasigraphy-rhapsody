@@ -1,0 +1,11 @@
+#define COLOR_LINE      0.188f, 0.209f, 0.190f
+#define COLOR_BLACK     0.114f, 0.108f, 0.156f
+#define COLOR_BLUE      0.15f,  0.29f,  0.82f
+#define COLOR_BLUE_L    0.818f, 0.900f, 0.824f
+#define COLOR_YELLOW    0.70f,  0.80f,  0.30f
+#define COLOR_YELLOW_D  0.70f,  0.50f,  0.30f
+#define COLOR_RED       0.82f,  0.15f,  0.15f
+#define COLOR_GREEN     0.309f, 0.820f, 0.150f
+#define COLOR_BROWN     0.804f, 0.820f, 0.150f
+#define COLOR_BROWN_L   0.90f,  0.90f,  0.40f
+#define COLOR_PURPLE    0.61f,  0.15f,  0.82f
